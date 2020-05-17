@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="?attr/actionBarSize"
+    android:gravity="center_vertical"
+    android:orientation="horizontal"
+    android:id="@+id/actionLayout"
+    android:background="@color/actionBar">
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="50dp"
+        android:src="@drawable/iniestashala_logo"
+        android:id="@+id/menu_img"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="INIESTASHALA"
+        android:textColor="@color/textColor"
+        android:textSize="25sp"
+        android:id="@+id/app_title"
+        android:paddingLeft="20dp"
+        android:textStyle="bold"/>
+
+</LinearLayout>

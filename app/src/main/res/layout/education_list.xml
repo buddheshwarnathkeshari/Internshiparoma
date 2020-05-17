@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="1dp"
+        android:layout_marginRight="1dp"
+        android:layout_centerInParent="true"
+        android:padding="15dp"
+        app:cardCornerRadius="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/cross_button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginRight="8dp"
+                    android:padding="2dp"
+                    android:src="@drawable/ic_clear" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="25dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginRight="25dp"
+                    android:layout_marginBottom="20dp"
+                    android:layout_below="@+id/cross_button">
+
+                    <Button
+                        android:id="@+id/secondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="X (Secondary)"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left|center_vertical"
+                        android:drawableRight="@drawable/ic_add"/>
+                    <Button
+                        android:id="@+id/seniorSecondary"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="XII (Senior Secondary)"
+                        android:layout_below="@+id/secondary"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left"
+                        android:drawableRight="@drawable/ic_add"/>
+
+                    <Button
+                        android:id="@+id/graduation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="Graduation"
+                        android:layout_below="@+id/seniorSecondary"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left|center_vertical"
+                        android:drawableRight="@drawable/ic_add"/>
+
+                    <Button
+                        android:id="@+id/post"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="Post Graduation"
+                        android:layout_below="@+id/graduation"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left|center_vertical"
+                        android:drawableRight="@drawable/ic_add"/>
+
+                    <Button
+                        android:id="@+id/phd"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="PhD"
+                        android:layout_below="@+id/post"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left|center_vertical"
+                        android:drawableRight="@drawable/ic_add"/>
+
+                    <Button
+                        android:id="@+id/diploma"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@drawable/button_light"
+                        android:text="Diploma"
+                        android:layout_below="@+id/phd"
+                        android:textColor="@color/buttonColor"
+                        android:textSize="15sp"
+                        android:padding="10dp"
+                        android:gravity="left|center_vertical"
+                        android:drawableRight="@drawable/ic_add"/>
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+</RelativeLayout>

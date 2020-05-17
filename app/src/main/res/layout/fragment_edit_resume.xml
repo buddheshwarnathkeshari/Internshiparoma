@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resume.EditResume"
+    android:orientation="vertical">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <Button
+                android:id="@+id/btn_download"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/round_button_light"
+                android:text="Download Resume"
+                android:textColor="@color/buttonColor"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="20dp"
+                android:padding="10dp"
+                android:drawableRight="@drawable/ic_download"/>
+            <Button
+                android:id="@+id/btn_internship"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:background="@drawable/button_back2"
+                android:text="Browse Internships"
+                android:textColor="@color/textColor"
+                android:gravity="center"
+                android:textAlignment="center"
+                android:textSize="20dp"/>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PERSONAL DETAILS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimaryDark"
+                    android:textSize="20sp"
+                    android:text="Munazza Fatma"
+                    android:textStyle="bold"
+                    android:layout_marginBottom="5dp"
+                    android:drawableRight="@drawable/ic_edit"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="fatmamunazza@gmail.com"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+91-7255093044"
+                    android:textSize="15sp"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Patna"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="EDUCATION"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewEducation">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Education"
+                    android:textSize="15sp"
+                    android:id="@+id/education"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="JOBS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewJob">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Job"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:id="@+id/job"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="INTERNSHIPS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewInternship">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Internship"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:id="@+id/internship"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="POSITIONS OF RESPONSIBILITY"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewResponsibility">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Position of Responsibility"
+                    android:textSize="15sp"
+                    android:id="@+id/responsibility"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TRAININGS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewTraining">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Training"
+                    android:textSize="15sp"
+                    android:id="@+id/training"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PROJECTS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewProject">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Project"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:id="@+id/project"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="SKILLS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewSkill">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Skill"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:id="@+id/skill"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="WORK SAMPLES"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewWork">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Work Sample"
+                    android:textSize="15sp"
+                    android:id="@+id/work"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="20dp">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ADDITIONAL DETAILS"
+                    android:textSize="15sp"
+                    android:layout_marginBottom="15dp"/>
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:id="@+id/recyclerViewDetail">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="+ Add Additional Detail"
+                    android:textSize="15sp"
+                    android:id="@+id/details"
+                    android:textStyle="bold"
+                    android:textColor="@color/buttonColor"/>
+            </LinearLayout>
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="5dp"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center_horizontal"
+                android:background="@color/background" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>
