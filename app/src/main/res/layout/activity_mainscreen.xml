@@ -19,12 +19,22 @@
 
             <include layout="@layout/appbar_mainscreen"/>
         </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:id="@+id/bottomnav"
+            app:menu="@menu/menu_bottomnavigation"
+            android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="unlabeled"/>
 
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_below="@id/linerlayout_appbar_mainscreen"
-            android:id="@+id/container_mainscreen"/>
+            android:id="@+id/container_mainscreen"
+            android:layout_above="@+id/bottomnav"
+            android:background="@color/background"/>
 
     </RelativeLayout>
 
@@ -36,10 +46,8 @@
         app:headerLayout="@layout/header_drawer_mainscreen"
         android:background="#fff"
         android:elevation="20dp"
-        app:itemIconTint="#000"
+        app:itemShapeFillColor="#ff00ff"
         app:menu="@menu/drawer_mainscreen">
-
     </com.google.android.material.navigation.NavigationView>
-
 
 </androidx.drawerlayout.widget.DrawerLayout>

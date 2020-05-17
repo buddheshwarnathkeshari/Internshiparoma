@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/textColor">
+    android:background="@color/windowColor">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -11,7 +11,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
-            android:background="@color/actionBar"
+            android:background="@color/colorPrimary"
             android:gravity="center"
             android:padding="50dp">
             <ImageView
@@ -23,7 +23,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="INIESTASHALA"
-                android:textColor="@color/textColor"
+                android:textColor="@color/windowColor"
                 android:textSize="25sp"
                 android:id="@+id/app_title"
                 android:textStyle="bold"/>

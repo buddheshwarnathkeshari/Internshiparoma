@@ -8,12 +8,12 @@
             android:title="HOME"
             android:id="@+id/home_drawer"
             android:icon="@drawable/ic_home"
-            android:iconTint="@color/drawerTextColor"/>
+            android:iconTint="@color/textColor"/>
         <item
             android:title="Edit Resume"
             android:id="@+id/resume_drawer"
             android:icon="@drawable/ic_edit_resume"
-            android:iconTint="@color/drawerTextColor"/>
+            android:iconTint="@color/textColor"/>
 
     </group>
 
