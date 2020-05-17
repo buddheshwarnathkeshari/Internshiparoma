@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".GettingStartedActivity"
+    android:background="#ffffff">
+
+    <ViewFlipper
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+
+        >
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/three"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:id="@+id/tv_ques1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DA4B29"
+                android:text="Want an Internship?"
+
+                android:textStyle="bold"
+                android:layout_below="@id/img1"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/tv_ans1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:text="Looking for Internships to build your resume?\nKudos, you've come to the right place!"
+                android:gravity="center"
+                android:layout_below="@id/tv_ques1"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/img2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/four"
+                android:layout_marginLeft="25dp"/>
+
+            <TextView
+                android:id="@+id/tv_ques2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DA4B29"
+                android:text="We got you covered!"
+                android:textStyle="bold"
+                android:layout_below="@id/img2"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/tv_ans2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+
+                android:text="Choose among thousands of internships that\nmatvh your preferences."
+                android:gravity="center"
+                android:layout_below="@id/tv_ques2"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/five"/>
+
+            <TextView
+                android:id="@+id/tv_ques3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DA4B29"
+                android:text="Send in your applications."
+                android:textStyle="bold"
+                android:layout_below="@id/img3"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"/>
+
+            <TextView
+
+                android:id="@+id/tv_ans3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+
+                android:text="Complete your profile and send as many\napplications as you like!"
+                android:gravity="center"
+                android:layout_below="@id/tv_ques3"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            >
+            <ImageView
+                android:id="@+id/img4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/six"/>
+
+            <TextView
+                android:id="@+id/tv_ques4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#DA4B29"
+                android:text="And you're hired!"
+                android:textStyle="bold"
+                android:layout_below="@id/img4"
+                android:layout_centerHorizontal="true"
+                android:textSize="25sp"/>
+
+            <TextView
+                android:id="@+id/tv_ans4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#000000"
+                android:layout_marginTop="10dp"
+                android:text="Recruiters will hire you based on your\nskills and experience."
+                android:gravity="center"
+                android:layout_below="@id/tv_ques4"
+                android:layout_centerHorizontal="true"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </ViewFlipper>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/dots"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="25dp"
+        >
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/v1"
+
+            android:background="@drawable/round"
+            />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/v2"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round2"
+            />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/v3"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round2"
+            />
+
+        <View
+            android:layout_width="10dp"
+            android:layout_height="10dp"
+            android:id="@+id/v4"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/round2"
+            />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_next"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="next"
+        android:textAllCaps="true"
+
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="25sp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:textColor="#DA4B2B"
+        android:layout_marginBottom="50dp"
+        android:textSize="18sp"
+        android:layout_marginRight="10dp"
+        android:onClick="next"/>
+
+    <TextView
+        android:id="@+id/tv_prev"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="prev"
+        android:textAllCaps="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:textColor="#F1B7AB"
+        android:layout_marginTop="50dp"
+        android:textSize="18sp"
+        android:layout_marginLeft="10dp"
+        android:visibility="gone"
+        android:onClick="prev"
+        android:paddingHorizontal="10dp"
+        android:paddingVertical="25sp"/>
+    <Button
+        android:id="@+id/btn_getStarted"
+        android:layout_width="125dp"
+        android:layout_height="wrap_content"
+        android:text="Get Started"
+        android:textSize="20sp"
+        android:background="@drawable/get_started"
+        android:textAllCaps="false"
+        android:textColor="#ffffff"
+        android:layout_marginBottom="30dp"
+        android:layout_marginRight="10dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:visibility="gone"
+
+        android:onClick="getStarted"/>
+
+</RelativeLayout>
