@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Internshiparoma</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="search_for_city_profile_or_company">Search for city,profile or company</string>
 </resources>
