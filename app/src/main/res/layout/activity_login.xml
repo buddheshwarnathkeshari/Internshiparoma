@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".RegisterActivity"
+    tools:context=".LoginActivity"
     android:background="#DA4B2B">
 
 
@@ -12,7 +12,7 @@
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Register"
+        android:text="Welcome Back!"
         android:layout_above="@id/tv2"
         android:textColor="#ffffff"
         android:layout_marginLeft="50dp"
@@ -21,14 +21,15 @@
         android:id="@+id/tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Create an account to continue"
+        android:text="Login to continue"
         android:layout_above="@id/cardview"
         android:layout_alignLeft="@+id/tv_welcome"
         android:textColor="#ffffff"
         android:textSize="18sp"/>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/cardview"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
@@ -39,84 +40,54 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
-
-
-        <EditText
-            android:id="@+id/et_name"
-            android:drawableLeft="@drawable/ic_icon_feather_user"
-            android:drawablePadding="15dp"
-            android:hint="Name"
-            android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginHorizontal="35dp"
-            android:layout_marginTop="25dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-
-        <EditText
-            android:id="@+id/et_email"
-            android:hint="Email"
-            android:drawableLeft="@drawable/ic_icon_feather_mail"
-            android:drawablePadding="15dp"
-            android:backgroundTint="@color/colorPrimary"
-            android:textColorHint="@color/colorPrimary"
-            android:textColor="@color/colorPrimaryDark"
-            android:layout_marginHorizontal="35dp"
-            android:layout_marginTop="25dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
+            android:orientation="vertical"
+            android:gravity="center">
 
 
 
-
-            <AutoCompleteTextView
-                android:id="@+id/et_course"
-
-                android:drawableLeft="@drawable/ic_icon_awesome_graduation_cap"
-                android:drawablePadding="15dp"
-                android:hint="Select your course"
-                android:drawableRight="@drawable/ic_arrow_drop_down_primary_24dp"
+            <EditText
+                android:id="@+id/et_email"
+                android:hint="Email"
                 android:backgroundTint="@color/colorPrimary"
-                android:inputType="none"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginHorizontal="35dp"
+                android:drawableLeft="@drawable/ic_icon_feather_mail"
+                android:drawablePadding="20dp"
+
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
 
 
+
+
+
             <EditText
                 android:id="@+id/et_pass"
-
-                android:drawableLeft="@drawable/ic_icon_feather_eye"
-                android:drawablePadding="15dp"
                 android:hint="Password"
                 android:backgroundTint="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
                 android:layout_marginHorizontal="35dp"
                 android:layout_marginTop="25dp"
+                android:drawableLeft="@drawable/ic_icon_feather_eye"
+                android:drawablePadding="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
 
-
-
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Look for internships"
+                android:text="Login"
                 android:textColor="@color/white"
                 android:background="@drawable/get_started"
                 android:textAllCaps="false"
                 android:layout_marginVertical="25dp"
                 android:layout_marginHorizontal="50dp"/>
+
         </LinearLayout>
 
 
@@ -125,7 +96,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SKIP FOR NOW"
-        android:layout_above="@id/ll_already"
+        android:layout_above="@id/ll_dont"
         android:layout_below="@id/cardview"
         android:gravity="center"
         android:layout_centerHorizontal="true"
@@ -136,20 +107,20 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="25dp"
-        android:id="@+id/ll_already"
+        android:id="@+id/ll_dont"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true">
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Already have an account?"
+            android:text="Don't have an account?"
             android:textColor="@color/colorPrimary"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:onClick="goToLogin"
+            android:text="Register"
+            android:onClick="goToRegister"
             android:textColor="@color/white"
             android:layout_marginLeft="15dp"/>
     </LinearLayout>

@@ -2,6 +2,7 @@ package com.buddheshwar.internshiparoma;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -79,15 +80,15 @@ public class GettingStartedActivity extends AppCompatActivity {
                 break;
             case 2:
 
-                v2.setBackgroundResource(R.drawable.round);
                 v1.setBackgroundResource(R.drawable.round2);
+                v2.setBackgroundResource(R.drawable.round);
                 v3.setBackgroundResource(R.drawable.round2);
                 v4.setBackgroundResource(R.drawable.round2);
                 break;
             case 3:
-                v3.setBackgroundResource(R.drawable.round);
-                v2.setBackgroundResource(R.drawable.round2);
                 v1.setBackgroundResource(R.drawable.round2);
+                v2.setBackgroundResource(R.drawable.round2);
+                v3.setBackgroundResource(R.drawable.round);
                 v4.setBackgroundResource(R.drawable.round2);
                 btnGetStarted.setVisibility(View.GONE);
                 tvNext.setVisibility(View.VISIBLE);
@@ -96,16 +97,19 @@ public class GettingStartedActivity extends AppCompatActivity {
             case 4:
                 tvNext.setVisibility(View.GONE);
                 btnGetStarted.setVisibility(View.VISIBLE);
-                v4.setBackgroundResource(R.drawable.round);
+                v1.setBackgroundResource(R.drawable.round2);
                 v2.setBackgroundResource(R.drawable.round2);
                 v3.setBackgroundResource(R.drawable.round2);
-                v1.setBackgroundResource(R.drawable.round2);
+                v4.setBackgroundResource(R.drawable.round);
                 break;
         }
     }
 
 
     public void getStarted(View view) {
+
+        startActivity(new Intent(GettingStartedActivity.this,LoginActivity.class));
+        overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
     }
 }
