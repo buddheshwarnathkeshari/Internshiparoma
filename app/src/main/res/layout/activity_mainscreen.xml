@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Mainscreen"
+    android:id="@+id/drawerLayout">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linerlayout_appbar_mainscreen"
+            android:orientation="vertical">
+
+            <include layout="@layout/appbar_mainscreen"/>
+        </LinearLayout>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:id="@+id/bottomnav"
+            app:menu="@menu/menu_bottomnavigation"
+            android:layout_alignParentBottom="true"
+            app:labelVisibilityMode="unlabeled"/>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/linerlayout_appbar_mainscreen"
+            android:id="@+id/container_mainscreen"
+            android:layout_above="@+id/bottomnav"
+            android:background="@color/background"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:id="@+id/navigation_drawer_view"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/header_drawer_mainscreen"
+        android:background="#fff"
+        android:elevation="20dp"
+        app:itemShapeFillColor="#ff00ff"
+        app:menu="@menu/drawer_mainscreen">
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
