@@ -4,50 +4,63 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".resume.EditResume"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="@color/windowColor">
 
     <!-- TODO: Update blank fragment layout -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@color/viewResumeColor"
+        android:id="@+id/viewResume"
+        android:visibility="invisible"/>
+
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">
-            <Button
+            <TextView
                 android:id="@+id/btn_download"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
+                android:textAllCaps="false"
                 android:layout_marginTop="25dp"
                 android:layout_marginBottom="15dp"
                 android:background="@drawable/round_button_light"
                 android:text="Download Resume"
-                android:textColor="@color/buttonColor"
+                android:textColor="@color/colorPrimary"
                 android:gravity="center"
                 android:textAlignment="center"
                 android:textSize="20dp"
                 android:padding="10dp"
                 android:drawableRight="@drawable/ic_download"/>
-            <Button
+            <TextView
                 android:id="@+id/btn_internship"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="25dp"
                 android:layout_marginRight="25dp"
-                android:background="@drawable/button_back2"
+                android:background="@drawable/button_back"
                 android:text="Browse Internships"
-                android:textColor="@color/textColor"
+                android:textAllCaps="false"
+                android:textColor="@color/windowColor"
                 android:gravity="center"
+                android:padding="10dp"
                 android:textAlignment="center"
                 android:textSize="20dp"/>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
+                android:layout_height="3dp"
                 android:layout_marginTop="15dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -63,8 +76,8 @@
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textColor="@color/colorPrimaryDark"
-                    android:textSize="20sp"
+                    android:textColor="@color/textColor"
+                    android:textSize="22sp"
                     android:text="Munazza Fatma"
                     android:textStyle="bold"
                     android:layout_marginBottom="5dp"
@@ -78,19 +91,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+91-7255093044"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textColor="@color/educationListColor"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Patna"
-                    android:textSize="15sp"/>
+                    android:textSize="15sp"
+                    android:textColor="@color/educationListColor"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -117,14 +131,13 @@
                     android:textSize="15sp"
                     android:id="@+id/education"
                     android:textStyle="bold"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -151,14 +164,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:id="@+id/job"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -185,14 +197,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:id="@+id/internship"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -219,14 +230,13 @@
                     android:textSize="15sp"
                     android:id="@+id/responsibility"
                     android:textStyle="bold"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -253,14 +263,13 @@
                     android:textSize="15sp"
                     android:id="@+id/training"
                     android:textStyle="bold"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -287,14 +296,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:id="@+id/project"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -321,14 +329,13 @@
                     android:textSize="15sp"
                     android:textStyle="bold"
                     android:id="@+id/skill"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -355,14 +362,13 @@
                     android:textSize="15sp"
                     android:id="@+id/work"
                     android:textStyle="bold"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -389,14 +395,13 @@
                     android:textSize="15sp"
                     android:id="@+id/details"
                     android:textStyle="bold"
-                    android:textColor="@color/buttonColor"/>
+                    android:textColor="@color/colorPrimary"/>
             </LinearLayout>
             <View
                 android:layout_width="match_parent"
-                android:layout_height="5dp"
-                android:layout_marginTop="15dp"
+                android:layout_height="3dp"
                 android:layout_gravity="center_horizontal"
-                android:background="@color/background" />
+                android:background="@color/viewColor" />
 
         </LinearLayout>
     </ScrollView>

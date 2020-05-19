@@ -11,8 +11,7 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="200dp"
-            android:background="@color/colorPrimary"
-            >
+            android:background="@color/colorPrimary">
             <ImageView
                 android:id="@+id/closedrawer"
                 android:layout_width="30dp"
@@ -20,7 +19,7 @@
                 android:layout_margin="10dp"
                 android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:src="@drawable/ic_arrow_back_black_24dp"/>
+                android:src="@drawable/ic_arrow_back"/>
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -36,20 +35,20 @@
                 android:layout_marginTop="50dp"
                 android:layout_alignParentStart="true"
                 android:layout_margin="5dp"/>
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_centerInParent="true"
-                    android:layout_toEndOf="@+id/profileimage">
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Saiteja janjirala"
-                android:textColor="@color/windowColor"
-                android:textSize="15sp"
-                android:id="@+id/username"
-                android:textStyle="bold"/>
+                android:orientation="vertical"
+                android:layout_centerInParent="true"
+                android:layout_toEndOf="@+id/profileimage">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Saiteja janjirala"
+                    android:textColor="@color/windowColor"
+                    android:textSize="15sp"
+                    android:id="@+id/username"
+                    android:textStyle="bold"/>
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -58,7 +57,7 @@
                     android:textSize="12sp"
                     android:id="@+id/useremail"
                     android:textStyle="bold"/>
-                </LinearLayout>
+            </LinearLayout>
 
             </RelativeLayout>
 

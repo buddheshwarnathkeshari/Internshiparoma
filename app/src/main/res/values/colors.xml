@@ -4,8 +4,12 @@
     <color name="colorPrimaryDark">#DA4B29</color>
     <color name="colorAccent">#03DAC5</color>
     <color name="background">#F5F4F4</color>
+    <color name="viewColor">#E1DFDF</color>
+    <color name="viewResumeColor">#F1EFEF</color>
+    <color name="educationListColor">#8C8585</color>
     <color name="textColor">#000</color>
     <color name="windowColor">#fff</color>
     <color name="actionBar">#0000ff</color>
     <color name="buttonColor">#DA4B29</color>
+    <color name="caretColor">#EBB5A9</color>
 </resources>

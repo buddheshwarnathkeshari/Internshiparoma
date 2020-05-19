@@ -1,5 +1,6 @@
 package com.buddheshwar.internshiparoma;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.Gravity;
 import android.view.MenuItem;
@@ -17,6 +18,7 @@ import androidx.fragment.app.Fragment;
 
 import com.buddheshwar.internshiparoma.fragments.DashboardFragment;
 import com.buddheshwar.internshiparoma.resume.EditResume;
+import com.buddheshwar.internshiparoma.resume.Resume;
 import com.google.android.material.navigation.NavigationView;
 
 public class Mainscreen extends AppCompatActivity {
@@ -59,16 +61,19 @@ public class Mainscreen extends AppCompatActivity {
                         return false;
                     }
                     case R.id.resume_drawer: {
-                        fr=new EditResume();
+                      /*  fr=new EditResume();
                         if(!resumeFlag){
                             getSupportFragmentManager().beginTransaction().replace(R.id.container_mainscreen,fr).addToBackStack(null).commit();
                             resumeFlag=true;
                         }
                         else{
                             getSupportFragmentManager().beginTransaction().replace(R.id.container_mainscreen,fr).commit();
-                        }
+                        }*/
+
+                        Intent i=new Intent(Mainscreen.this, Resume.class);
+                        startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        appTitle.setText("RESUME");
+                      //  appTitle.setText("RESUME");
 
                         return false;
 
