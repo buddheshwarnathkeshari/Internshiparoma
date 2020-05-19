@@ -4,4 +4,9 @@
     <color name="colorPrimary">#F1B7AB</color>
     <color name="colorAccent">#F1B7AB</color>
     <color name="white">#ffffff</color>
+    <color name="background">#F5F4F4</color>
+    <color name="textColor">#000</color>
+    <color name="windowColor">#fff</color>
+    <color name="actionBar">#0000ff</color>
+    <color name="buttonColor">#DA4B29</color>
 </resources>
