@@ -48,6 +48,7 @@
             <EditText
                 android:id="@+id/et_email"
                 android:hint="Email"
+                android:inputType="textEmailAddress"
                 android:backgroundTint="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
                 android:textColor="@color/colorPrimaryDark"
@@ -66,6 +67,7 @@
 
             <EditText
                 android:id="@+id/et_pass"
+                android:inputType="textPassword"
                 android:hint="Password"
                 android:backgroundTint="@color/colorPrimary"
                 android:textColorHint="@color/colorPrimary"
