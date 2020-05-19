@@ -11,6 +11,7 @@
         android:theme="@style/AppTheme">
         <activity android:name=".resume.Resume"></activity>
         <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".GettingStartedActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
