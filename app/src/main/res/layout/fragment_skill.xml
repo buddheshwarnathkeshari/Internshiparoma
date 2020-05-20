@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resume.Skill"
+    android:orientation="vertical"
+    android:background="@color/windowColor"
+    android:padding="10dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/skill"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Start Typing..."
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:text="@string/skill"
+        android:textColor="@color/textColor"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="10dp"
+        android:layout_marginLeft="10dp"
+        android:weightSum="3">
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Beginner"
+            android:layout_weight="1"
+            android:id="@+id/beginner"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Intermediate"
+            android:layout_weight="1"
+            android:id="@+id/intermediate"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Advanced"
+            android:id="@+id/advanced"
+            android:layout_weight="1"/>
+    </RadioGroup>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_back"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_margin="10dp"
+        android:paddingLeft="80dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="80dp"
+        android:textAllCaps="false"
+        android:textColor="@color/windowColor"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+</LinearLayout>
