@@ -28,7 +28,7 @@
                 android:id="@+id/tv_ques1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textColor="#DA4B29"
+                android:textColor="@color/dark"
                 android:text="Want an Internship?"
 
                 android:textStyle="bold"
