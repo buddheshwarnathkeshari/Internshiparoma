@@ -12,4 +12,9 @@
         <item name="android:textColorHint">@color/educationListColor</item>
 
     </style>
+    <style name="Popup" parent="Theme.MaterialComponents.CompactMenu">
+        <item name="android:layout_width" >match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
 </resources>

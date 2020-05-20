@@ -10,15 +10,13 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
-
-        <LinearLayout
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:id="@+id/linerlayout_appbar_mainscreen"
-            android:orientation="vertical">
-
-            <include layout="@layout/appbar_mainscreen"/>
-        </LinearLayout>
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="@style/ThemeOverlay.AppCompat.ActionBar"/>
         <com.google.android.material.bottomnavigation.BottomNavigationView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -31,7 +29,7 @@
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/linerlayout_appbar_mainscreen"
+            android:layout_below="@id/toolbar"
             android:id="@+id/container_mainscreen"
             android:layout_above="@+id/bottomnav"
             android:background="@color/background"/>
