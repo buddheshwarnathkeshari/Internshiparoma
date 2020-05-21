@@ -1,5 +1,6 @@
 package com.buddheshwar.internshiparoma.fragments;
 
+import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -53,9 +54,10 @@ public class DashboardFragment extends Fragment {
         citiesrecyclerview.setLayoutManager(layoutManager);
         citiesrecyclerview.setAdapter(madapter);
         madapter.setonclicklistener(new CitiesAdapter.onclicklistener() {
+            @SuppressLint("ShowToast")
             @Override
             public void oncityselelected(int position) {
-                Toast.makeText(getActivity(),modelArrayList.get(position).getCityname(),Toast.LENGTH_SHORT);
+                Toast.makeText(getActivity(),modelArrayList.get(position).getCityname(),Toast.LENGTH_SHORT).show();
             }
         });
         return view;

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragments.Internships"
+    android:background="@color/background"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:id="@+id/totalnumberofinternships"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="more internships to come"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:layout_margin="10dp"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/internshipsrecyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/totalnumberofinternships"/>
+
+</RelativeLayout>

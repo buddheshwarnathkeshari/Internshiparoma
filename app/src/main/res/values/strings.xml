@@ -3,4 +3,10 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="open_drawer">open drawer</string>
+    <string name="close_drawer">close drawer</string>
+    <string name="error_text">This field is required!</string>
+    <string name="skill">How would you rate your skill in </string>
+    <string name="responsibility">Example: Volunteer at Swacch Bharat Abhiyaan in 2019. </string>
+    <string name="add_detail_info">Example: Secured first position in Inter Debate Competition organized by City Montessori School,Lucknow.</string>
 </resources>

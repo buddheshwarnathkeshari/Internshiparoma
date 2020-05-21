@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resume.WorkSample"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@color/windowColor">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/blog"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Blog Link"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <EditText
+        android:id="@+id/github"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Github Profile Link"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <EditText
+        android:id="@+id/playStore"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Play Store Developer A/C(Public Link)"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <EditText
+        android:id="@+id/behance"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Behance Portfolio Link"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <EditText
+        android:id="@+id/other"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="15dp"
+        android:layout_margin="10dp"
+        android:hint="Other Portfolio Link"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_back"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_margin="10dp"
+        android:paddingLeft="80dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="80dp"
+        android:textAllCaps="false"
+        android:textColor="@color/windowColor"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+</LinearLayout>

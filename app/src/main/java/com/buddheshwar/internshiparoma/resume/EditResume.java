@@ -1,6 +1,5 @@
 package com.buddheshwar.internshiparoma.resume;
 
-import android.app.Dialog;
 import android.content.DialogInterface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -20,9 +19,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.buddheshwar.internshiparoma.R;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
-
-
-import java.util.ArrayList;
 
 
 public class EditResume extends Fragment implements View.OnClickListener {
@@ -99,56 +95,88 @@ public class EditResume extends Fragment implements View.OnClickListener {
         job.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new JobInternshipTrainingDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","job");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         internship.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new JobInternshipTrainingDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","internship");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         responsibility.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new ResumeDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","responsibility");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         training.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new JobInternshipTrainingDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","training");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         project.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new ResumeDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","project");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         skill.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new Skill();
+               /* Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","project");
+                fr.setArguments(bundle);*/
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         work.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new WorkSample();
+               /* Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","project");
+                fr.setArguments(bundle);*/
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
         detail.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(getContext(), "job", Toast.LENGTH_SHORT).show();
+                Fragment fr = new ResumeDetails();
+                Bundle bundle=new Bundle();
+                bundle.putString("pageTitle","detail");
+                fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }
         });
@@ -197,7 +225,7 @@ public class EditResume extends Fragment implements View.OnClickListener {
 
     @Override
     public void onClick(View view) {
-        Fragment fr = new GraduationDetails();
+        Fragment fr = new EducationDetails();
         Bundle bundle=new Bundle();
         switch (view.getId()) {
             case R.id.secondary:

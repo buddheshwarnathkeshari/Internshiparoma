@@ -1,51 +1,51 @@
 package com.buddheshwar.internshiparoma.resume;
 
-import android.app.Dialog;
+import android.content.Context;
 import android.os.Build;
 import android.os.Bundle;
 
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
 
-import android.text.Editable;
 import android.text.InputType;
-import android.text.TextWatcher;
+import android.view.ContextThemeWrapper;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
-import android.view.MotionEvent;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-import android.widget.NumberPicker;
-import android.widget.PopupWindow;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.buddheshwar.internshiparoma.R;
 
 import java.util.Date;
 
-public class GraduationDetails extends Fragment {
+public class EducationDetails extends Fragment {
 
-    public GraduationDetails() {
+    public EducationDetails() {
         // Required empty public constructor
     }
+
     RelativeLayout actionResume;
     TextView resumeTitle,status;
     ImageView home;
-    EditText college,performance,stream,degree,startYr,endYr,scale,intermediateStream;
+    EditText college,performance,streamSchool,degreeBoard,startYr,endYr,scale,intermediateStream;
     final Date d=new Date();
     final int year=d.getYear() + 1900;
+    Button save;
+    private String title;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        final View view=inflater.inflate(R.layout.fragment_graduation_details, container, false);
+        final View view=inflater.inflate(R.layout.fragment_education_details, container, false);
 
-        String title=getArguments().getString("title");
+        title=getArguments().getString("title");
 
         actionResume=getActivity().findViewById(R.id.actionResume);
         resumeTitle=getActivity().findViewById(R.id.resume_title);
@@ -56,15 +56,16 @@ public class GraduationDetails extends Fragment {
         endYr=view.findViewById(R.id.endYr);
         scale=view.findViewById(R.id.scale);
         performance=view.findViewById(R.id.performance);
-        stream=view.findViewById(R.id.stream);
-        degree=view.findViewById(R.id.degree);
+        streamSchool=view.findViewById(R.id.streamSchool);
+        degreeBoard=view.findViewById(R.id.degreeBoard);
         intermediateStream=view.findViewById(R.id.intermediateStream);
 
         status=view.findViewById(R.id.status);
+        save=view.findViewById(R.id.save);
 
         home.setVisibility(View.VISIBLE);
 
-        LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
+        final LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp.setMargins(20,10,20,10);
         lp.weight = 2;
 
@@ -76,8 +77,8 @@ public class GraduationDetails extends Fragment {
                 endYr.setVisibility(View.GONE);
                 startYr.setLayoutParams(lp);
                 startYr.setHint("Year of completion");
-                degree.setHint("Board");
-                stream.setHint("School");
+                degreeBoard.setHint("Board");
+                streamSchool.setHint("School");
                 break;
             case "seniorSecondary":
                 resumeTitle.setText("XII(Senior Secondary) Details");
@@ -87,8 +88,8 @@ public class GraduationDetails extends Fragment {
                 startYr.setLayoutParams(lp);
                 startYr.setHint("Year of completion");
                 intermediateStream.setVisibility(View.VISIBLE);
-                degree.setHint("Board");
-                stream.setHint("School");
+                degreeBoard.setHint("Board");
+                streamSchool.setHint("School");
                 break;
             case "graduation":
                 resumeTitle.setText("Graduation Details");
@@ -101,12 +102,12 @@ public class GraduationDetails extends Fragment {
             case "diploma":
                 resumeTitle.setText("Diploma Details");
                 status.setText("Diploma status");
-                degree.setVisibility(View.GONE);
+                degreeBoard.setVisibility(View.GONE);
                 break;
             case "phd":
                 resumeTitle.setText("PhD Details");
                 status.setText("PhD status");
-                degree.setVisibility(View.GONE);
+                degreeBoard.setVisibility(View.GONE);
                 break;
             default:
                 break;
@@ -226,6 +227,38 @@ public class GraduationDetails extends Fragment {
                 showStream(intermediateStream);
             }
         });
+
+        save.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                switch (title){
+                    case "secondary":
+
+                        break;
+                    case "seniorSecondary":
+
+                        break;
+                    case "graduation":
+
+                        break;
+                    case "post":
+
+                        break;
+                    case "diploma":
+
+                        break;
+                    case "phd":
+
+                        break;
+                    default:
+                        break;
+                }
+
+            }
+        });
+
+
+
 
         return view;
     }
