@@ -169,8 +169,9 @@ public class JobInternshipTrainingDetails extends Fragment implements CompoundBu
                     end.setEnabled(false);
                 }
                 else{
-                    end.setText("End Date");
+                    end.setText("");
                     end.setEnabled(true);
+                    end.setFocusable(true);
                 }
                 break;
         }
