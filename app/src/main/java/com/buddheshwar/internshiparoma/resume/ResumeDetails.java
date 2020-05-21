@@ -168,8 +168,9 @@ public class ResumeDetails extends Fragment implements CompoundButton.OnCheckedC
             end.setEnabled(false);
         }
         else{
-            end.setText("End Date");
+            end.setText("");
             end.setEnabled(true);
+            end.setFocusable(true);
         }
     }
 }
