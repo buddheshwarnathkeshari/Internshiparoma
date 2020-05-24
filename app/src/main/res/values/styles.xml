@@ -12,6 +12,19 @@
         <item name="android:textColorHint">@color/educationListColor</item>
 
     </style>
+    <style name="SecondAppTheme" parent="Theme.AppCompat.Light">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowBackground">@color/windowColor</item>
+        <item name="android:textColor">@color/textColor</item>
+        <item name="colorControlActivated">@color/caretColor</item>
+        <item name="android:textColorHint">@color/educationListColor</item>
+
+    </style>
+
+
     <style name="Popup" parent="Theme.MaterialComponents.CompactMenu">
         <item name="android:layout_width" >match_parent</item>
         <item name="android:layout_height">wrap_content</item>

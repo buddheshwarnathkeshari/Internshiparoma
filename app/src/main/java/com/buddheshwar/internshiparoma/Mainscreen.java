@@ -60,16 +60,12 @@ public class Mainscreen extends AppCompatActivity {
                         getSupportActionBar().setTitle("Dashboard");
                         return false;
                     }
+                    case R.id.notifications:{
+                        startActivity(new Intent(Mainscreen.this,NotificationActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        return false;
+                    }
                     case R.id.resume_drawer: {
-                      /*  fr=new EditResume();
-                        if(!resumeFlag){
-                            getSupportFragmentManager().beginTransaction().replace(R.id.container_mainscreen,fr).addToBackStack(null).commit();
-                            resumeFlag=true;
-                        }
-                        else{
-                            getSupportFragmentManager().beginTransaction().replace(R.id.container_mainscreen,fr).commit();
-                        }*/
-
                         Intent i=new Intent(Mainscreen.this, Resume.class);
                         startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
@@ -163,11 +159,12 @@ public class Mainscreen extends AppCompatActivity {
         } else {
             Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.container_mainscreen);
             assert fragment != null;
-            if (new DashboardFragment().equals(fragment)) {
+            DashboardFragment dashboard=new DashboardFragment();
+            if (dashboard.equals(fragment)) {
                 ActivityCompat.finishAffinity(this);
             }
             else{
-                super.onBackPressed();
+                openfragment(dashboard);
             }
         }
         resumeFlag=false;
