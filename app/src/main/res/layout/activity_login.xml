@@ -88,6 +88,7 @@
                 android:background="@drawable/get_started"
                 android:textAllCaps="false"
                 android:layout_marginVertical="25dp"
+                android:onClick="goToMain"
                 android:layout_marginHorizontal="50dp"/>
 
         </LinearLayout>

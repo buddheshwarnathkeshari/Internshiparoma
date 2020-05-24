@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".VerifyEmailActivity"
+    android:background="@color/white">
+    
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/dark"
+        android:id="@+id/colored"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verify Email"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textSize="35dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="30dp"
+        />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/colored"
+        android:src="@drawable/img"
+        android:layout_marginTop="-100dp"/>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter the 4 digit code we sent you\nvia email to continue"
+        android:gravity="center_horizontal"
+        android:layout_below="@id/img"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="-25dp"/>
+
+
+
+
+
+    <LinearLayout
+        android:id="@+id/ll_otp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_1"
+        android:layout_centerHorizontal="true"
+        >
+
+        <EditText
+            android:id="@+id/et_otp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="65dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/et_otp2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="65dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/et_otp3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="65dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/et_otp4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4"
+            android:textSize="65dp"
+            android:padding="5dp"
+            android:layout_margin="5dp"/>
+
+    </LinearLayout>
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_below="@id/ll_otp"
+    android:id="@+id/ll_countdown"
+    android:layout_marginTop="15dp"
+    android:layout_centerHorizontal="true">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="code expires in "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:57"
+        android:textColor="@color/dark"/>
+
+</LinearLayout>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:text="Continue"
+        android:textColor="@color/white"
+        android:layout_above="@id/ll_didnt"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/get_started"
+        android:paddingHorizontal="40dp"
+        android:textAllCaps="false"
+        android:layout_marginBottom="25dp"
+        android:onClick="goToContinueAs"
+        />
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:layout_centerHorizontal="true"
+    android:id="@+id/ll_didnt"
+    android:layout_marginBottom="25dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Didn't get code? "/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Resend code"
+        android:textColor="@color/dark"/>
+
+</LinearLayout>
+
+</RelativeLayout>

@@ -111,7 +111,5 @@ public class GettingStartedActivity extends AppCompatActivity {
         startActivity(new Intent(GettingStartedActivity.this,LoginActivity.class));
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
-        Intent i=new Intent(GettingStartedActivity.this,Mainscreen.class);
-        startActivity(i);
     }
 }

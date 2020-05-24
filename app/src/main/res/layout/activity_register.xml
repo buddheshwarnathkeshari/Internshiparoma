@@ -42,7 +42,7 @@
             android:orientation="vertical">
 
 
-        <EditText
+       <!-- <EditText
             android:id="@+id/et_name"
             android:drawableLeft="@drawable/ic_icon_feather_user"
             android:drawablePadding="15dp"
@@ -54,7 +54,7 @@
             android:backgroundTint="@color/colorPrimary"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            />
+            />-->
 
         <EditText
             android:id="@+id/et_email"
@@ -74,7 +74,7 @@
 
 
 
-            <AutoCompleteTextView
+           <!-- <AutoCompleteTextView
                 android:id="@+id/et_course"
 
                 android:drawableLeft="@drawable/ic_icon_awesome_graduation_cap"
@@ -89,8 +89,7 @@
                 android:layout_marginTop="25dp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                />
-
+                />-->
 
             <EditText
                 android:id="@+id/et_pass"
@@ -107,17 +106,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 />
+            <EditText
+                android:id="@+id/et_cnfm_pass"
+
+                android:inputType="textPassword"
+                android:drawableLeft="@drawable/ic_icon_feather_eye"
+                android:drawablePadding="15dp"
+                android:hint="Confirm Password"
+                android:backgroundTint="@color/colorPrimary"
+                android:textColorHint="@color/colorPrimary"
+                android:textColor="@color/colorPrimaryDark"
+                android:layout_marginHorizontal="35dp"
+                android:layout_marginTop="25dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                />
 
 
 
             <Button
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Look for internships"
+                android:text="Register"
                 android:textColor="@color/white"
                 android:background="@drawable/get_started"
                 android:textAllCaps="false"
                 android:layout_marginVertical="25dp"
+                android:onClick="goToVerify"
                 android:layout_marginHorizontal="50dp"/>
         </LinearLayout>
 

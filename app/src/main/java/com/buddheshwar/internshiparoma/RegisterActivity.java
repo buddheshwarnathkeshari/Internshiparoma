@@ -16,14 +16,18 @@ AutoCompleteTextView actv;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-        actv=findViewById(R.id.et_course);
+       /* actv=findViewById(R.id.et_course);
         String[] courses=new String[]{"B.tech","BCA","M.tech","MCA"};
         actv.setAdapter(new ArrayAdapter<String>(getApplicationContext(),android.R.layout.select_dialog_item,courses));
-        actv.setThreshold(1);
-        actv.setTextColor(Color.parseColor("#DA4B2B"));
+        actv.setThreshold(0);
+        actv.setTextColor(Color.parseColor("#DA4B2B"));*/
     }
 
     public void goToLogin(View view) {
         startActivity(new Intent(RegisterActivity.this,LoginActivity.class));
+    }
+
+    public void goToVerify(View view) {
+        startActivity(new Intent(RegisterActivity.this,VerifyEmailActivity.class));
     }
 }

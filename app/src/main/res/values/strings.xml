@@ -9,4 +9,15 @@
     <string name="skill">How would you rate your skill in </string>
     <string name="responsibility">Example: Volunteer at Swacch Bharat Abhiyaan in 2019. </string>
     <string name="add_detail_info">Example: Secured first position in Inter Debate Competition organized by City Montessori School,Lucknow.</string>
+    <string-array name="nn">
+
+        <item>k</item>
+        <item>k</item>
+        <item>k</item>
+        <item>k</item>
+        <item>k</item>
+        <item>k</item>
+        <item>k</item>
+    </string-array>
+
 </resources>

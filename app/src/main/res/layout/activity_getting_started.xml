@@ -209,11 +209,10 @@
         android:textAllCaps="true"
 
         android:paddingHorizontal="10dp"
-        android:paddingVertical="25sp"
         android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
         android:textColor="#DA4B2B"
-        android:layout_marginBottom="50dp"
+        android:layout_alignTop="@id/dots"
         android:textSize="18sp"
         android:layout_marginRight="10dp"
         android:onClick="next"/>

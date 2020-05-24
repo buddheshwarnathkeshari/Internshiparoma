@@ -78,6 +78,8 @@ public class EducationDetails extends Fragment {
                 startYr.setLayoutParams(lp);
                 startYr.setHint("Year of completion");
                 degreeBoard.setHint("Board");
+
+
                 streamSchool.setHint("School");
                 break;
             case "seniorSecondary":

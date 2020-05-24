@@ -6,21 +6,22 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
-public class LoginActivity extends AppCompatActivity {
+public class AsIntern2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_as_intern2);
     }
-
-    public void goToRegister(View view) {
-        startActivity(new Intent(LoginActivity.this,RegisterActivity.class));
-    }
-
     public void goToMain(View view) {
 
-        Intent i=new Intent(LoginActivity.this,Mainscreen.class);
+        Intent i=new Intent(AsIntern2.this,Mainscreen.class);
+        startActivity(i);
+    }
+
+    public void goToSelectField(View view) {
+
+        Intent i=new Intent(AsIntern2.this,SelectField.class);
         startActivity(i);
     }
 }

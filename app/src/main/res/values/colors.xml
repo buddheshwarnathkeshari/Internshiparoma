@@ -13,6 +13,7 @@
     <color name="actionBar">#0000ff</color>
     <color name="buttonColor">#DA4B29</color>
     <color name="caretColor">#EBB5A9</color>
-    <color name="dark">#D94B2B</color>
+    <color name="dark">#EDE15637</color>
     <color name="light">#F0B6AA</color>
+    <color name="mid">#EDD8664D</color>
 </resources>
