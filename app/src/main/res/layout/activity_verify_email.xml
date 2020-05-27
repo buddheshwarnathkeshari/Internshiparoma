@@ -57,34 +57,38 @@
 
         <EditText
             android:id="@+id/et_otp1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
             android:textSize="65dp"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
             android:padding="5dp"
             android:layout_margin="5dp"/>
         <EditText
             android:id="@+id/et_otp2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
             android:textSize="65dp"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
             android:padding="5dp"
             android:layout_margin="5dp"/>
         <EditText
             android:id="@+id/et_otp3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
             android:textSize="65dp"
+            android:inputType="numberDecimal"
+            android:maxLength="1"
             android:padding="5dp"
             android:layout_margin="5dp"/>
         <EditText
             android:id="@+id/et_otp4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="4"
+            android:layout_width="50dp"
+            android:layout_height="100dp"
             android:textSize="65dp"
+            android:maxLength="1"
+            android:inputType="numberDecimal"
             android:padding="5dp"
             android:layout_margin="5dp"/>
 

@@ -13,20 +13,20 @@
         <activity
             android:name=".NotificationActivity"
             android:theme="@style/SecondAppTheme" />
-        <activity android:name=".GettingStartedActivity" />
-        <activity android:name=".AsEmployer" />
-        <activity android:name=".SelectField" />
-        <activity android:name=".AsIntern2" />
+        <activity android:name=".GettingStartedActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".AsEmployer" android:screenOrientation="portrait"/>
+        <activity android:name=".SelectField" android:screenOrientation="portrait"/>
+        <activity android:name=".AsIntern2" android:screenOrientation="portrait"/>
         <activity
             android:name=".AsIntern"
             android:screenOrientation="portrait" />
-        <activity android:name=".ContinueAsActivity" />
+        <activity android:name=".ContinueAsActivity" android:screenOrientation="portrait"/>
         <activity android:name=".resume.Resume" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".LoginActivity" />
+        <activity android:name=".RegisterActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
         <activity android:name=".EditPreferencesActivity" />
-        <activity android:name=".VerifyEmailActivity" />
-        <activity android:name=".SplashScreen">
+        <activity android:name=".VerifyEmailActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".SplashScreen" android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

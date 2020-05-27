@@ -27,6 +27,7 @@ import java.util.Collections;
  * A simple {@link Fragment} subclass.
  */
 public class DashboardFragment extends Fragment {
+
     private ArrayList<CitiesModel> modelArrayList;
     private EditText searchtext;
     private RecyclerView citiesrecyclerview;

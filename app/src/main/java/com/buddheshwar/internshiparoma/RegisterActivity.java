@@ -14,6 +14,7 @@ public class RegisterActivity extends AppCompatActivity {
 AutoCompleteTextView actv;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
        /* actv=findViewById(R.id.et_course);
@@ -29,5 +30,9 @@ AutoCompleteTextView actv;
 
     public void goToVerify(View view) {
         startActivity(new Intent(RegisterActivity.this,VerifyEmailActivity.class));
+    }
+
+    public void goToMain(View view) {
+        startActivity(new Intent(RegisterActivity.this,Mainscreen.class));
     }
 }
