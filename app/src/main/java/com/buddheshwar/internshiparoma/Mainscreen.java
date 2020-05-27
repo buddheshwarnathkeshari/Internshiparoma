@@ -2,6 +2,7 @@ package com.buddheshwar.internshiparoma;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -36,8 +38,7 @@ public class Mainscreen extends AppCompatActivity {
     LinearLayout actionLayout;
     TextView appTitle;
     Toolbar toolbar;
-
-
+    final MenuItem[] previousmenuitem = {null};
     BottomNavigationView bottomnavigationview;
     public static boolean resumeFlag = false;
     @Override
@@ -50,17 +51,23 @@ public class Mainscreen extends AppCompatActivity {
         drawerLayout=findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolbar);
 
-
         settoolbar();
         navigationDrawerLayout.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-                Fragment fr;
+                if(previousmenuitem[0] !=null){
+                    previousmenuitem[0].setChecked(false);
+                }
+                menuItem.setCheckable(true);
+                menuItem.setChecked(true);
+                previousmenuitem[0] =menuItem;
                 switch (menuItem.getItemId()) {
                     case R.id.home_drawer: {
-                        fr=new DashboardFragment();
-                        openfragment(fr);
-                        getSupportActionBar().setTitle("Dashboard");
+                        Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.container_mainscreen);
+                        if(!(fragment instanceof DashboardFragment)){
+                            getSupportActionBar().setTitle("Dashboard");
+                            openfragment(new DashboardFragment());
+                        }
                         return false;
                     }
                     case R.id.notifications:{
@@ -72,7 +79,7 @@ public class Mainscreen extends AppCompatActivity {
                         Intent i=new Intent(Mainscreen.this, Resume.class);
                         startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        getSupportActionBar().setTitle("Dashboard");
+                        getSupportActionBar().setTitle("Resume");
                         //  appTitle.setText("RESUME");
                         return false;
 
@@ -81,7 +88,7 @@ public class Mainscreen extends AppCompatActivity {
                         Intent i=new Intent(Mainscreen.this, ContactUs.class);
                         startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        getSupportActionBar().setTitle("Dashboard");
+                        getSupportActionBar().setTitle("Contact Us");
                         return false;
 
                     }
@@ -89,9 +96,8 @@ public class Mainscreen extends AppCompatActivity {
                         Intent i=new Intent(Mainscreen.this, AboutUs.class);
                         startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
-                        getSupportActionBar().setTitle("Dashboard");
+                        getSupportActionBar().setTitle("About Us");
                         return false;
-
                     }
                     case R.id.editpreferences:{
                         startActivity(new Intent(Mainscreen.this, EditPreferencesActivity.class));
@@ -112,13 +118,14 @@ public class Mainscreen extends AppCompatActivity {
                 switch (item.getItemId()){
                     case R.id.home_bottom_nav:{
                         Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.container_mainscreen);
-                        if(!new DashboardFragment().equals(fragment)){
+                        assert fragment != null;
+                        if (!(fragment instanceof DashboardFragment)){
                             item.setCheckable(true);
                             item.setChecked(true);
                             getSupportActionBar().setTitle("Dashboard");
                             openfragment(new DashboardFragment());
-                            return false;
                         }
+                        return false;
                     }
                     case R.id.internship_bottom_nav:{
                         item.setCheckable(true);
@@ -184,14 +191,21 @@ public class Mainscreen extends AppCompatActivity {
         } else {
             Fragment fragment=getSupportFragmentManager().findFragmentById(R.id.container_mainscreen);
             assert fragment != null;
-            DashboardFragment dashboard=new DashboardFragment();
-            if (dashboard.equals(fragment)) {
-                ActivityCompat.finishAffinity(this);
+            if (fragment instanceof DashboardFragment) {
+                ActivityCompat.finishAffinity(Mainscreen.this);
             }
             else{
-                openfragment(dashboard);
+                openfragment(new DashboardFragment());
             }
+
         }
-        resumeFlag=false;
+    }
+
+    @Override
+    protected void onRestart() {
+        if(previousmenuitem[0] !=null){
+            previousmenuitem[0].setChecked(false);
+        }
+        super.onRestart();
     }
 }

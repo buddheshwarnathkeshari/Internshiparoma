@@ -1,18 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/background">
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical">
     <EditText
         android:id="@+id/search"
         android:layout_width="match_parent"
@@ -20,63 +13,48 @@
         android:layout_marginTop="10dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="10dp"
         android:inputType="textPersonName"
+        android:layout_alignParentTop="true"
         android:background="@drawable/searchshape"
         android:drawableTint="@color/educationListColor"
         android:drawableStart="@drawable/ic_search_black_24dp"
         android:drawablePadding="10dp"
         android:padding="10dp"
         android:hint="Search for city,profile or company"/>
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/citiesrecyclerview"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="@color/background"/>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:weightSum="2"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp">
-        <Button
-            android:id="@+id/postinternship"
-            android:layout_width="wrap_content"
-            android:background="@drawable/button_back"
-            android:layout_height="wrap_content"
-            android:text="Post Internship"
-            android:layout_alignParentStart="true"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:textAllCaps="false"
-            android:textColor="@color/windowColor"
-            android:textSize="18sp"
-            android:layout_weight="1"/>
-        <Button
-            android:layout_alignParentEnd="true"
-            android:id="@+id/onlinetraining"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:background="@drawable/button_back"
-            android:text="Online Training"
-            android:layout_margin="10dp"
-            android:padding="10dp"
-            android:layout_weight="1"
-            android:textAllCaps="false"
-            android:textColor="@color/windowColor"
-            android:textSize="18sp"
-            />
-    </LinearLayout>
-    <LinearLayout
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/citiesrecyclerview"
         android:layout_width="match_parent"
         android:layout_height="100dp"
-        android:orientation="horizontal"
+        android:layout_margin="10dp"
+        android:layout_below="@+id/search"
+        android:background="@color/background"/>
+    <Button
+        android:id="@+id/postortraining"
+        android:layout_width="match_parent"
+        android:background="@drawable/button_back"
+        android:layout_height="wrap_content"
+        android:text="Post Internship or online training"
+        android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="10dp"
-        android:layout_weight="10">
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/citiesrecyclerview"
+        android:padding="10dp"
+        android:textAllCaps="false"
+        android:textColor="@color/windowColor"
+        android:textSize="18sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:weightSum="7"
+        android:layout_below="@+id/postortraining">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:weightSum="10">
         <Space
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -185,227 +163,236 @@
             tools:ignore="NestedWeights" />
 
     </LinearLayout>
-        <LinearLayout
+        <Space
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_weight="10"
-            android:layout_marginBottom="10dp"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"/>
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:weightSum="10"
+        >
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/contentwriting"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
             >
-            <Space
-                android:layout_width="0dp"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/contentwriting"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
+                android:weightSum="3"
+                android:orientation="vertical">
+                <ImageView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_content_writer"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:text="Content Writing"
-                        android:textSize="12sp"
-                        android:textColor="@color/textColor"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/designer"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_designer"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:text="Designer"
-                        android:textSize="12sp"
-                        android:textColor="@color/textColor"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/hr"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_hr"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:text="HR"
-                        android:textSize="12sp"
-                        android:textColor="@color/textColor"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                tools:ignore="NestedWeights" />
-
-        </LinearLayout>
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:orientation="horizontal"
-            android:layout_weight="10"
-            android:layout_marginBottom="10dp">
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/developer"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_developer"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:text="Developer"
-                        android:textSize="12sp"
-                        android:textColor="@color/textColor"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/Finance"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:weightSum="3"
-                    android:orientation="vertical">
-                    <ImageView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="2"
-                        android:padding="10dp"
-                        android:src="@drawable/ic_finance"
-                        />
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:layout_weight="1"
-                        android:textAlignment="center"
-                        android:text="Finance"
-                        android:textSize="12sp"
-                        android:textColor="@color/textColor"
-                        />
-                </LinearLayout>
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.25"
-                tools:ignore="NestedWeights" />
-            <androidx.cardview.widget.CardView
-                android:id="@+id/viewallinternships"
-                android:layout_width="0dp"
-                android:layout_weight="2.5"
-                android:layout_height="match_parent"
-                >
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_content_writer"
+                    />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:textAlignment="center"
-                    android:gravity="center"
-                    android:textColor="@color/colorPrimary"
-                    android:text="View all Internships"
+                    android:text="Content Writing"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
                     />
-            </androidx.cardview.widget.CardView>
-            <Space
-                android:layout_width="0dp"
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/designer"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                tools:ignore="NestedWeights" />
-
-        </LinearLayout>
-
+                android:weightSum="3"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_designer"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Designer"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/hr"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_hr"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="HR"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
 
     </LinearLayout>
-    </ScrollView>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25"/>
 
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="2"
+        android:weightSum="10"
+        android:layout_marginBottom="10dp">
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/developer"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_developer"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Developer"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/Finance"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="3"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="2"
+                    android:padding="10dp"
+                    android:src="@drawable/ic_finance"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:textAlignment="center"
+                    android:text="Finance"
+                    android:textSize="12sp"
+                    android:textColor="@color/textColor"
+                    />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.25"
+            tools:ignore="NestedWeights" />
+        <androidx.cardview.widget.CardView
+            android:id="@+id/viewallinternships"
+            android:layout_width="0dp"
+            android:layout_weight="2.5"
+            android:layout_height="match_parent"
+            >
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:text="View all Internships"
+                />
+        </androidx.cardview.widget.CardView>
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            tools:ignore="NestedWeights" />
+    </LinearLayout>
 
-</LinearLayout>
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="0.25" />
+    </LinearLayout>
+    </RelativeLayout>

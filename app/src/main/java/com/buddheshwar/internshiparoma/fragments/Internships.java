@@ -54,9 +54,7 @@ public class Internships extends Fragment {
                 }
             });
             super.onCreateOptionsMenu(menu, inflater);
-
     }
-
     @Override
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
         switch(item.getItemId()){

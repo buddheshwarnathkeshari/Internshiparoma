@@ -41,8 +41,7 @@ public class PostInternshipActivity extends AppCompatActivity {
         etAbout=findViewById(R.id.et_about);
         final TextView tvcount=findViewById(R.id.counter);
 
-
-
+        
         ac=findViewById(R.id.actv);
         ac1st=findViewById(R.id.actv1);
 
@@ -71,8 +70,6 @@ public class PostInternshipActivity extends AppCompatActivity {
                     ac1st.showDropDown();
             }
         });
-
-
         etStartDate.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
