@@ -46,7 +46,7 @@ public class JobInternshipTrainingDetails extends Fragment implements CompoundBu
         // Inflate the layout for this fragment
         View view= inflater.inflate(R.layout.fragment_job_internship_training_details, container, false);
         actionResume=getActivity().findViewById(R.id.actionResume);
-        resumeTitle=getActivity().findViewById(R.id.resume_title);
+        resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
         start=view.findViewById(R.id.start);

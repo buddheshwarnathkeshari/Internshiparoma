@@ -6,6 +6,7 @@ import android.os.Bundle;
 
 import androidx.appcompat.widget.PopupMenu;
 import androidx.fragment.app.Fragment;
+import androidx.fragment.app.ListFragment;
 
 import android.text.InputType;
 import android.view.ContextThemeWrapper;
@@ -13,12 +14,16 @@ import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ArrayAdapter;
+import android.widget.AutoCompleteTextView;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.buddheshwar.internshiparoma.R;
 
@@ -33,11 +38,14 @@ public class EducationDetails extends Fragment {
     RelativeLayout actionResume;
     TextView resumeTitle,status;
     ImageView home;
-    EditText college,performance,streamSchool,degreeBoard,startYr,endYr,scale,intermediateStream;
+    EditText college,performance,streamSchool,degreeBoard;
+    AutoCompleteTextView intermediateStream,scale,startYr,endYr;
     final Date d=new Date();
     final int year=d.getYear() + 1900;
     Button save;
     private String title;
+    private String[] startYrList,endYrList;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -48,7 +56,7 @@ public class EducationDetails extends Fragment {
         title=getArguments().getString("title");
 
         actionResume=getActivity().findViewById(R.id.actionResume);
-        resumeTitle=getActivity().findViewById(R.id.resume_title);
+        resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
         college=view.findViewById(R.id.college);
@@ -64,6 +72,15 @@ public class EducationDetails extends Fragment {
         save=view.findViewById(R.id.save);
 
         home.setVisibility(View.VISIBLE);
+
+        startYrList=new String[41];
+        for (int i = 0; i <= 40; i++) {
+            startYrList[i]=String.valueOf(year-i);
+        }
+        endYrList=new String[47];
+        for (int i = -6; i <= 40; i++) {
+            endYrList[i+6]=String.valueOf(year-i);
+        }
 
         final LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(0, ViewGroup.LayoutParams.WRAP_CONTENT);
         lp.setMargins(20,10,20,10);
@@ -120,6 +137,10 @@ public class EducationDetails extends Fragment {
 
         startYr.setInputType(InputType.TYPE_NULL);
 
+        ArrayAdapter adapter2=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,startYrList);
+        startYr.setAdapter(adapter2);
+        startYr.setInputType(0);
+
         startYr.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -127,8 +148,8 @@ public class EducationDetails extends Fragment {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         startYr.setCompoundDrawablesWithIntrinsicBounds(null, null, getActivity().getDrawable(R.drawable.ic_caret_down), null);
                     }
-                   showDailog(startYr,0);
-
+                    startYr.showDropDown();
+                    Toast.makeText(getContext(), "munazza", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -142,11 +163,15 @@ public class EducationDetails extends Fragment {
         startYr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDailog(startYr,0);
+                startYr.showDropDown();
             }
         });
 
         endYr.setInputType(InputType.TYPE_NULL);
+        ArrayAdapter adapter3=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,endYrList);
+        endYr.setAdapter(adapter3);
+        endYr.setInputType(0);
+
         endYr.setOnFocusChangeListener(new View.OnFocusChangeListener() {
             @Override
             public void onFocusChange(View view, boolean b) {
@@ -154,8 +179,7 @@ public class EducationDetails extends Fragment {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         endYr.setCompoundDrawablesWithIntrinsicBounds(null, null, getActivity().getDrawable(R.drawable.ic_caret_down), null);
                     }
-                    showDailog(endYr,-6);
-
+                    endYr.showDropDown();
                 }
                 else{
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -169,9 +193,14 @@ public class EducationDetails extends Fragment {
         endYr.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showDailog(endYr,-6);
+                endYr.showDropDown();
             }
         });
+
+        String[] list4=new String[]{"Percentage","CGPA 10","CGPA 9","CGPA 8", "CGPA 7","CGPA 6","CGPA 5"};
+        ArrayAdapter adapter4=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,list4);
+        scale.setAdapter(adapter4);
+        scale.setInputType(0);
 
         scale.setInputType(InputType.TYPE_NULL);
 
@@ -182,7 +211,7 @@ public class EducationDetails extends Fragment {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         scale.setCompoundDrawablesWithIntrinsicBounds(null, null, getActivity().getDrawable(R.drawable.ic_caret_down), null);
                     }
-                       showScale(scale);
+                    scale.showDropDown();
                 }
                 else{
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -196,12 +225,15 @@ public class EducationDetails extends Fragment {
         scale.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               showScale(scale);
+                scale.showDropDown();
             }
         });
 
 
-
+        String[] list5=new String[]{"Science","Commerce","Arts"};
+        ArrayAdapter adapter5=new ArrayAdapter<>(getContext(),android.R.layout.simple_list_item_1,list5);
+        intermediateStream.setAdapter(adapter5);
+        intermediateStream.setInputType(0);
 
         intermediateStream.setInputType(InputType.TYPE_NULL);
 
@@ -212,7 +244,8 @@ public class EducationDetails extends Fragment {
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                         intermediateStream.setCompoundDrawablesWithIntrinsicBounds(null, null, getActivity().getDrawable(R.drawable.ic_caret_down), null);
                     }
-                    showStream(intermediateStream);
+                    intermediateStream.showDropDown();
+
                 }
                 else{
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
@@ -226,7 +259,7 @@ public class EducationDetails extends Fragment {
         intermediateStream.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showStream(intermediateStream);
+                intermediateStream.showDropDown();
             }
         });
 
@@ -259,74 +292,6 @@ public class EducationDetails extends Fragment {
             }
         });
 
-
-
-
         return view;
-    }
-
-    private void showScale(final EditText scale) {
-
-        PopupMenu menu = new PopupMenu(getContext(), scale);
-        menu.getMenu().add("Percentage");
-        menu.getMenu().add("CGPA 10");
-        menu.getMenu().add("CGPA 9");
-        menu.getMenu().add("CGPA 8");
-        menu.getMenu().add("CGPA 7");
-        menu.getMenu().add("CGPA 6");
-        menu.getMenu().add("CGPA 5");
-
-        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                scale.setText(" " + item.getTitle() + " ");
-
-                return true;
-            }
-
-        });
-
-        menu.show();
-    }
-
-    private void showDailog(final EditText et, int j) {
-
-        PopupMenu menu = new PopupMenu(getContext(), et);
-        for (int i = j; i <= 40; i++) {
-            menu.getMenu().add(String.valueOf(year-i));
-        }
-        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                et.setText(" " + item.getTitle() + " ");
-
-                return true;
-            }
-
-        });
-
-        menu.show();
-
-    }
-    private void showStream(final EditText et) {
-
-        PopupMenu menu = new PopupMenu(getContext(), et);
-
-        menu.getMenu().add("Science");
-        menu.getMenu().add("Commerce");
-        menu.getMenu().add("Arts");
-
-        menu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-            @Override
-            public boolean onMenuItemClick(MenuItem item) {
-                et.setText(" " + item.getTitle() + " ");
-
-                return true;
-            }
-
-        });
-
-        menu.show();
-
     }
 }

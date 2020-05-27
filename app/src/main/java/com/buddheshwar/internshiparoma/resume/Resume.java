@@ -10,6 +10,7 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 import com.buddheshwar.internshiparoma.Mainscreen;
 import com.buddheshwar.internshiparoma.R;
@@ -18,6 +19,7 @@ public class Resume extends AppCompatActivity {
 
     RelativeLayout actionResume;
     ImageView back,home;
+    TextView resumeTitle;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,9 @@ public class Resume extends AppCompatActivity {
         actionResume=findViewById(R.id.actionResume);
         back=actionResume.findViewById(R.id.back);
         home=actionResume.findViewById(R.id.home);
+        resumeTitle=actionResume.findViewById(R.id.title);
+
+        resumeTitle.setText("Resume");
 
         Fragment fr=new EditResume();
         getSupportFragmentManager().beginTransaction().replace(R.id.container_resume,fr).commit();

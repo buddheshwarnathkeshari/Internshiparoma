@@ -13,28 +13,31 @@ import android.widget.TextView;
 
 import com.buddheshwar.internshiparoma.R;
 
-public class WorkSample extends Fragment {
+public class PersonalDetails extends Fragment {
 
-    public WorkSample() {
+
+    public PersonalDetails() {
         // Required empty public constructor
     }
 
     RelativeLayout actionResume;
     TextView resumeTitle;
     ImageView home;
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view=inflater.inflate(R.layout.fragment_work_sample, container, false);
+        View view= inflater.inflate(R.layout.fragment_personal_details, container, false);
 
         actionResume=getActivity().findViewById(R.id.actionResume);
         resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
         home.setVisibility(View.VISIBLE);
-        resumeTitle.setText("Work Sample Details");
 
-       return view;
+        resumeTitle.setText("Personal Details");
+
+        return view;
     }
 }

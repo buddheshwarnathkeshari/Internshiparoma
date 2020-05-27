@@ -1,6 +1,7 @@
 package com.buddheshwar.internshiparoma.resume;
 
 import android.content.DialogInterface;
+import android.graphics.Typeface;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -18,7 +19,11 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.buddheshwar.internshiparoma.R;
+import com.buddheshwar.internshiparoma.adaptersForResume.EducationAdapter;
+import com.buddheshwar.internshiparoma.modelForResume.AfterIntermediateData;
 import com.google.android.material.bottomsheet.BottomSheetDialog;
+
+import java.util.ArrayList;
 
 
 public class EditResume extends Fragment implements View.OnClickListener {
@@ -38,7 +43,11 @@ public class EditResume extends Fragment implements View.OnClickListener {
     private BottomSheetDialog education_Dialog;
     RelativeLayout actionResume;
     TextView resumeTitle;
-    ImageView home;
+    ImageView home,edit;
+
+    private ArrayList<AfterIntermediateData> graduationList;
+    private EducationAdapter recylerViewAdapter;
+
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -47,12 +56,15 @@ public class EditResume extends Fragment implements View.OnClickListener {
         View view=inflater.inflate(R.layout.fragment_edit_resume, container, false);
 
         actionResume=getActivity().findViewById(R.id.actionResume);
-        resumeTitle=getActivity().findViewById(R.id.resume_title);
+        resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
         home.setVisibility(View.GONE);
 
         resumeTitle.setText("Resume");
+
+
+        graduationList=new ArrayList<AfterIntermediateData>();
 
         recyclerViewEducation=view.findViewById(R.id.recyclerViewEducation);
         recyclerViewJob=view.findViewById(R.id.recyclerViewJob);
@@ -67,6 +79,8 @@ public class EditResume extends Fragment implements View.OnClickListener {
         scrollView=view.findViewById(R.id.scrollView);
         viewResume=view.findViewById(R.id.viewResume);
 
+        edit=view.findViewById(R.id.edit);
+
         education=view.findViewById(R.id.education);
         job=view.findViewById(R.id.job);
         internship=view.findViewById(R.id.internship);
@@ -78,6 +92,10 @@ public class EditResume extends Fragment implements View.OnClickListener {
         detail=view.findViewById(R.id.details);
 
         education_Dialog = new BottomSheetDialog(getContext());
+
+        recylerViewAdapter = new EducationAdapter(getContext(), graduationList, recyclerViewEducation);
+
+        graduationList.add(new AfterIntermediateData("graduation",2017,2021,"National Institute of Technology, Patna","Electronics and Communication Department","CGPA(10)",7.52f));
 
         education_Dialog.setOnCancelListener(new DialogInterface.OnCancelListener() {
             @Override
@@ -176,6 +194,15 @@ public class EditResume extends Fragment implements View.OnClickListener {
                 Bundle bundle=new Bundle();
                 bundle.putString("pageTitle","detail");
                 fr.setArguments(bundle);
+                getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
+
+            }
+        });
+
+        edit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Fragment fr = new PersonalDetails();
                 getFragmentManager().beginTransaction().replace(R.id.container_resume, fr).addToBackStack(null).commit();
 
             }

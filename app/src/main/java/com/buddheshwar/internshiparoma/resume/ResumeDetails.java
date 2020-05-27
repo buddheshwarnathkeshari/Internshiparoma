@@ -49,7 +49,7 @@ public class ResumeDetails extends Fragment implements CompoundButton.OnCheckedC
          View view=inflater.inflate(R.layout.fragment_resume_details, container, false);
 
         actionResume=getActivity().findViewById(R.id.actionResume);
-        resumeTitle=getActivity().findViewById(R.id.resume_title);
+        resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
 

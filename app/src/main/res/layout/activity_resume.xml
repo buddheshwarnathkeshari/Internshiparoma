@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <include layout="@layout/appbar_resume"/>
+        <include layout="@layout/appbar_for_another_screen"/>
     </LinearLayout>
 
     <FrameLayout
