@@ -1,6 +1,7 @@
 package com.buddheshwar.internshiparoma.fragments;
 
 import android.annotation.SuppressLint;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -10,9 +11,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.buddheshwar.internshiparoma.PostInternshipActivity;
 import com.buddheshwar.internshiparoma.adapters.CitiesAdapter;
 import com.buddheshwar.internshiparoma.R;
 import com.buddheshwar.internshiparoma.model.CitiesModel;
@@ -38,6 +41,17 @@ public class DashboardFragment extends Fragment {
         View view=inflater.inflate(R.layout.fragment_dashboard,container,false);
         searchtext=view.findViewById(R.id.search);
         citiesrecyclerview=view.findViewById(R.id.citiesrecyclerview);
+
+
+        Button post=view.findViewById(R.id.postinternship);
+
+        post.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(getContext(), PostInternshipActivity.class));
+            }
+        });
+
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         modelArrayList=new ArrayList<CitiesModel>();
         modelArrayList.add(new CitiesModel(R.drawable.banglore,"Banglore"));

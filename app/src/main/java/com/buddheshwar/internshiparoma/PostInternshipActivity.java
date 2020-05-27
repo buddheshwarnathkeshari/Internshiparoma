@@ -10,7 +10,6 @@ import android.text.TextWatcher;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
-import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -20,35 +19,35 @@ import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Locale;
 
-public class AsEmployer extends AppCompatActivity {
+public class PostInternshipActivity extends AppCompatActivity {
     ViewFlipper vf;
-    View v1,v2,v3,v4;
+    View v1,v2;
     int viewNumber;
     EditText etAbout,etStartDate,etLastDateToApply;
-    AutoCompleteTextView ac;
+    AutoCompleteTextView ac,ac1st;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_as_employer);
-
+        setContentView(R.layout.activity_post_internship);
         viewNumber=1;
         v1=findViewById(R.id.v1);
         v2=findViewById(R.id.v2);
-        v3=findViewById(R.id.v3);
-        v4=findViewById(R.id.v4);
         vf=findViewById(R.id.vf_details);
 
 
 
-      /*  etStartDate=findViewById(R.id.et_start_date);
+        etStartDate=findViewById(R.id.et_start_date);
         etLastDateToApply=findViewById(R.id.et_last_date_to_apply);
         etAbout=findViewById(R.id.et_about);
         final TextView tvcount=findViewById(R.id.counter);
 
-*/
 
-      /*  ac=findViewById(R.id.actv);
-        String[] list=new String[]{"Day.","Week","Month"};
+
+        ac=findViewById(R.id.actv);
+        ac1st=findViewById(R.id.actv1);
+
+        String[] duration=new String[]{"Day","Week","Month"};
+        String[] list=new String[]{"per hour","per day","per week","per month"};
         ArrayAdapter adapter=new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,list);
         ac.setAdapter(adapter);
         ac.setInputType(0);
@@ -60,6 +59,19 @@ public class AsEmployer extends AppCompatActivity {
                     ac.showDropDown();
             }
         });
+
+        ArrayAdapter adapter2=new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,duration);
+        ac1st.setAdapter(adapter2);
+        ac1st.setInputType(0);
+
+        ac1st.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+            @Override
+            public void onFocusChange(View v, boolean hasFocus) {
+                if(hasFocus)
+                    ac1st.showDropDown();
+            }
+        });
+
 
         etStartDate.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,34 +119,27 @@ public class AsEmployer extends AppCompatActivity {
 
     public void flip(View view) {
 
+        if(++viewNumber<=2)
         vf.showNext();
 
-        viewNumber++;
         switch(viewNumber){
             case 1:
                 v1.setBackgroundResource(R.drawable.round);
                 v2.setBackgroundResource(R.drawable.round2);
-                v3.setBackgroundResource(R.drawable.round2);
                 break;
             case 2:
 
                 v1.setBackgroundResource(R.drawable.round2);
                 v2.setBackgroundResource(R.drawable.round);
-                v3.setBackgroundResource(R.drawable.round2);
                 break;
             case 3:
 
-                v1.setBackgroundResource(R.drawable.round2);
-                v2.setBackgroundResource(R.drawable.round2);
-                v3.setBackgroundResource(R.drawable.round);
+                startActivity(new Intent(PostInternshipActivity.this,Mainscreen.class));
                 break;
-        }*/
+        }
 
 
     }
 
-    public void goToMain(View view) {
-        Intent i=new Intent(AsEmployer.this,Mainscreen.class);
-        startActivity(i);
-    }
 }
+

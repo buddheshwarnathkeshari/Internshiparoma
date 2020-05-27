@@ -4,10 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.KeyEvent;
+import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 import android.widget.ViewFlipper;
+
 
 public class GettingStartedActivity extends AppCompatActivity {
 
@@ -31,7 +34,10 @@ public class GettingStartedActivity extends AppCompatActivity {
         tvNext=findViewById(R.id.tv_next);
         tvPrev=findViewById(R.id.tv_prev);
         btnGetStarted=findViewById(R.id.btn_getStarted);
+
     }
+
+
     public void next(View v){
         vf.showNext();
         viewNumber++;
@@ -44,24 +50,24 @@ public class GettingStartedActivity extends AppCompatActivity {
                 break;
             case 2:
                 tvPrev.setVisibility(View.VISIBLE);
-                v2.setBackgroundResource(R.drawable.round);
                 v1.setBackgroundResource(R.drawable.round2);
+                v2.setBackgroundResource(R.drawable.round);
                 v3.setBackgroundResource(R.drawable.round2);
                 v4.setBackgroundResource(R.drawable.round2);
                 break;
             case 3:
-                v3.setBackgroundResource(R.drawable.round);
                 v2.setBackgroundResource(R.drawable.round2);
                 v1.setBackgroundResource(R.drawable.round2);
+                v3.setBackgroundResource(R.drawable.round);
                 v4.setBackgroundResource(R.drawable.round2);
                 break;
             case 4:
                 tvNext.setVisibility(View.GONE);
                 btnGetStarted.setVisibility(View.VISIBLE);
-                v4.setBackgroundResource(R.drawable.round);
+                v1.setBackgroundResource(R.drawable.round2);
                 v2.setBackgroundResource(R.drawable.round2);
                 v3.setBackgroundResource(R.drawable.round2);
-                v1.setBackgroundResource(R.drawable.round2);
+                v4.setBackgroundResource(R.drawable.round);
                 break;
         }
     }
@@ -112,4 +118,5 @@ public class GettingStartedActivity extends AppCompatActivity {
         overridePendingTransition(android.R.anim.slide_in_left,android.R.anim.slide_out_right);
 
     }
+
 }

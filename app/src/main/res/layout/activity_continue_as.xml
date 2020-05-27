@@ -32,9 +32,8 @@
         android:text="Intern/Student"
         android:textSize="25dp"
         android:layout_centerHorizontal="true"
-        android:textStyle="normal"
         android:onClick="goToIntern"
-        android:paddingHorizontal="30dp"
+        android:paddingHorizontal="35dp"
         android:textAllCaps="false"/>
 
     <View
@@ -59,7 +58,7 @@
         android:textSize="25dp"
         android:onClick="gotoAsEmployer"
         android:textStyle="normal"
-        android:paddingHorizontal="30dp"
+        android:paddingHorizontal="35dp"
         android:textAllCaps="false"/>
 
 

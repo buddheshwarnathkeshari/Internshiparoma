@@ -9,11 +9,14 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".NotificationActivity" android:theme="@style/SecondAppTheme"/>
+        <activity android:name=".PostInternshipActivity"></activity>
+        <activity
+            android:name=".NotificationActivity"
+            android:theme="@style/SecondAppTheme" />
         <activity android:name=".GettingStartedActivity" />
-        <activity android:name=".AsEmployer"></activity>
+        <activity android:name=".AsEmployer" />
         <activity android:name=".SelectField" />
-        <activity android:name=".AsIntern2"></activity>
+        <activity android:name=".AsIntern2" />
         <activity
             android:name=".AsIntern"
             android:screenOrientation="portrait" />
@@ -26,6 +29,7 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

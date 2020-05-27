@@ -6,6 +6,7 @@ import android.util.Log;
 import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -28,6 +29,8 @@ import com.buddheshwar.internshiparoma.resume.Resume;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 
+import java.sql.BatchUpdateException;
+
 public class Mainscreen extends AppCompatActivity {
 
     FrameLayout mainscreenContainer;
@@ -37,6 +40,8 @@ public class Mainscreen extends AppCompatActivity {
     LinearLayout actionLayout;
     TextView appTitle;
     Toolbar toolbar;
+
+
     BottomNavigationView bottomnavigationview;
     public static boolean resumeFlag = false;
     @Override
@@ -48,6 +53,8 @@ public class Mainscreen extends AppCompatActivity {
         navigationDrawerLayout=findViewById(R.id.navigation_drawer_view);
         drawerLayout=findViewById(R.id.drawerLayout);
         toolbar=findViewById(R.id.toolbar);
+
+
         settoolbar();
         navigationDrawerLayout.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
             @Override
