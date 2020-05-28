@@ -81,6 +81,12 @@ public class Mainscreen extends AppCompatActivity {
                         return false;
 
                     }
+                    case R.id.editpreferences:{
+                        startActivity(new Intent(Mainscreen.this, EditPreferencesActivity.class));
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportActionBar().setTitle("Edit Preference");
+                        return false;
+                    }
                     default: {
                         return false;
                     }

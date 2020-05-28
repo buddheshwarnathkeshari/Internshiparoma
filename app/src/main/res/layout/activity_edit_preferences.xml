@@ -14,6 +14,7 @@
         android:id="@+id/back"/>
 
     <TextView
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Prefernces"
@@ -26,24 +27,195 @@
         android:gravity="center_vertical"/>
 
 
-    <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/ic_icon_feather_home"
-        android:layout_alignParentRight="true"
-        android:paddingHorizontal="20dp"
-        android:paddingVertical="10dp"
-        android:onClick="goToMain"
-        android:id="@+id/home"/>
+
+
+
+
 
     <TextView
-        android:id="@+id/choose"
+        android:id="@+id/tv"
+        android:layout_below="@id/edit_preferences_title"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="20dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-       android:layout_below="@id/back"
-        android:text="CHOOSE YOUR PREFERENCES"
-        android:textSize="10dp"
-        android:textColor="#616161"/>
+        android:text="Choose your preferences"
+        />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv"
+        android:id="@+id/ll_details"
+        android:layout_marginHorizontal="20dp"
+        android:orientation="vertical">
+
+
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="1. Choose your 1st preference"
+            android:layout_marginVertical="10dp"
+            android:textColorHint="@color/light"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:background="@drawable/et_back"
+            android:id="@+id/et_preference_one"
+            android:onClick="goToSelectField"
+            android:focusable="false"
+            android:inputType="none"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="2. Choose your 2nd preference"
+            android:layout_marginVertical="10dp"
+            android:textColorHint="@color/light"
+            android:padding="10dp"
+            android:focusable="false"
+            android:maxLines="1"
+            android:background="@drawable/et_back"
+            android:onClick="goToSelectField"
+            android:id="@+id/et_preference_two"
+            android:inputType="none"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:onClick="goToSelectField"
+            android:focusable="false"
+            android:hint="3. Choose your 3rd preference"
+            android:layout_marginVertical="10dp"
+            android:textColorHint="@color/light"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:background="@drawable/et_back"
+            android:id="@+id/et_preference_three"
+            android:inputType="none"
+            />
+
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/ll_type"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@id/ll_details"
+        android:orientation="vertical"
+        >
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_below="@id/ll_details"
+            android:layout_marginTop="40dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="type of internship"
+            android:textAllCaps="true"
+            />
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb"
+            android:text="Full time internship"
+            android:layout_below="@id/tv2"/>
+
+
+        <CheckBox
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/cb2"
+            android:text="Work from Home/Part time internship"
+            android:layout_below="@id/cb"/>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/ll_cities"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CITIES"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Leave this blank if you don't have any preference"/>
+
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="1. Choose your 1st preference"
+                android:layout_marginVertical="10dp"
+                android:textColorHint="@color/light"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:background="@drawable/et_back"
+                android:id="@+id/et_preference_1"
+                android:onClick="goToSelectField"
+                android:focusable="false"
+                android:inputType="none"
+                />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="2. Choose your 2nd preference"
+                android:layout_marginVertical="10dp"
+                android:textColorHint="@color/light"
+                android:padding="10dp"
+                android:focusable="false"
+                android:maxLines="1"
+                android:background="@drawable/et_back"
+                android:onClick="goToSelectField"
+                android:id="@+id/et_preference_2"
+                android:inputType="none"
+                />
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:onClick="goToSelectField"
+                android:focusable="false"
+                android:hint="3. Choose your 3rd preference"
+                android:layout_marginVertical="10dp"
+                android:textColorHint="@color/light"
+                android:padding="10dp"
+                android:maxLines="1"
+                android:background="@drawable/et_back"
+                android:id="@+id/et_preference_3"
+                android:inputType="none"
+                />
+
+
+
+
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <Button
+        android:layout_width="200dp"
+        android:layout_height="40dp"
+        android:background="@drawable/get_started"
+        android:layout_below="@id/ll_type"
+        android:layout_centerHorizontal="true"
+        android:text="Save"
+        android:layout_marginTop="40dp"
+        android:onClick="goToMain"
+        android:textColor="#ffffff"
+        android:textAllCaps="false"
+        android:padding="10dp"/>
 
 </RelativeLayout>

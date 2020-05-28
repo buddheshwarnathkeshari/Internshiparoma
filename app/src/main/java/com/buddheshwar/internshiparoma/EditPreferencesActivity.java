@@ -8,6 +8,7 @@ import android.view.View;
 
 public class EditPreferencesActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -17,6 +18,13 @@ public class EditPreferencesActivity extends AppCompatActivity {
     public void goToMain(View view) {
 
         Intent i=new Intent(EditPreferencesActivity.this,Mainscreen.class);
+        startActivity(i);
+    }
+
+
+    public void goToSelectField(View view) {
+
+        Intent i=new Intent(EditPreferencesActivity.this,SelectField.class);
         startActivity(i);
     }
 }
