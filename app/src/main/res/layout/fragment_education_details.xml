@@ -49,7 +49,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2">
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/startYr"
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -62,7 +62,7 @@
             android:background="@drawable/grey_button_color_changer"
             android:textColor="@color/textColor"
             android:drawableRight="@drawable/ic_grey_caret_down"/>
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/endYr"
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -85,17 +85,31 @@
         android:hint="Degree"
         android:background="@drawable/grey_button_color_changer"
         android:textColor="@color/textColor"/>
-    <EditText
+    <!--<EditText
         android:id="@+id/intermediateStream"
         android:layout_width="match_parent"
         android:layout_height="50dp"
-        android:gravity="center_vertical"        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
         android:layout_margin="10dp"
         android:hint="Stream"
         android:visibility="gone"
         android:drawableRight="@drawable/ic_grey_caret_down"
         android:background="@drawable/grey_button_color_changer"
-        android:textColor="@color/textColor"/>
+        android:textColor="@color/textColor"/>-->
+    <AutoCompleteTextView
+        android:id="@+id/intermediateStream"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="Stream"
+        android:visibility="gone"
+        android:drawableRight="@drawable/ic_grey_caret_down"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"
+        android:maxLines="1" />
     <EditText
         android:id="@+id/streamSchool"
         android:layout_width="match_parent"
@@ -110,7 +124,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:weightSum="2">
-        <EditText
+        <AutoCompleteTextView
             android:id="@+id/scale"
             android:layout_width="0dp"
             android:layout_height="50dp"
@@ -121,7 +135,7 @@
             android:hint="Performance Scale"
             android:background="@drawable/grey_button_color_changer"
             android:textColor="@color/textColor"
-            android:drawableRight="@drawable/ic_grey_caret_down"/>
+            android:drawableRight="@drawable/ic_grey_caret_down" />
         <EditText
             android:id="@+id/performance"
             android:layout_width="0dp"
@@ -131,7 +145,7 @@
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:hint="Performance"
-            android:inputType="number"
+            android:inputType="numberDecimal"
             android:background="@drawable/grey_button_color_changer"
             android:textColor="@color/textColor"/>
 

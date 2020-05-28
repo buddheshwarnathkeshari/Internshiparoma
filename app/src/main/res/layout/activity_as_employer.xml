@@ -82,7 +82,7 @@
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:hint="Position for internship"
+            android:hint="Contact Number"
             android:layout_marginVertical="10dp"
             android:textColorHint="@color/light"
             android:padding="10dp"

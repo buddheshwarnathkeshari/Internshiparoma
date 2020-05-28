@@ -9,10 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PostInternshipActivity"></activity>
+        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".AboutUs" />
         <activity
             android:name=".NotificationActivity"
             android:theme="@style/SecondAppTheme" />
+        <activity android:name=".PostInternshipActivity"></activity>
+
         <activity android:name=".GettingStartedActivity" android:screenOrientation="portrait"/>
         <activity android:name=".AsEmployer" android:screenOrientation="portrait"/>
         <activity android:name=".SelectField" android:screenOrientation="portrait"/>
@@ -20,16 +23,15 @@
         <activity
             android:name=".AsIntern"
             android:screenOrientation="portrait" />
-        <activity android:name=".ContinueAsActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".ContinueAsActivity" />
         <activity android:name=".resume.Resume" />
-        <activity android:name=".RegisterActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".LoginActivity" android:screenOrientation="portrait"/>
+        <activity android:name=".RegisterActivity" />
+        <activity android:name=".LoginActivity" />
         <activity android:name=".EditPreferencesActivity" />
-        <activity android:name=".VerifyEmailActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".SplashScreen" android:screenOrientation="portrait">
+        <activity android:name=".VerifyEmailActivity" />
+        <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

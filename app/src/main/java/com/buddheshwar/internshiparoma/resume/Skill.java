@@ -28,7 +28,7 @@ public class Skill extends Fragment {
         View view=inflater.inflate(R.layout.fragment_skill, container, false);
 
         actionResume=getActivity().findViewById(R.id.actionResume);
-        resumeTitle=getActivity().findViewById(R.id.resume_title);
+        resumeTitle=getActivity().findViewById(R.id.title);
         home=getActivity().findViewById(R.id.home);
 
         home.setVisibility(View.VISIBLE);

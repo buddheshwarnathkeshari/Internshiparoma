@@ -2,8 +2,6 @@ package com.buddheshwar.internshiparoma;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
-import android.view.Gravity;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -11,7 +9,6 @@ import android.widget.FrameLayout;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,7 +21,6 @@ import androidx.fragment.app.Fragment;
 
 import com.buddheshwar.internshiparoma.fragments.DashboardFragment;
 import com.buddheshwar.internshiparoma.fragments.Internships;
-import com.buddheshwar.internshiparoma.resume.EditResume;
 import com.buddheshwar.internshiparoma.resume.Resume;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
@@ -78,6 +74,22 @@ public class Mainscreen extends AppCompatActivity {
                         drawerLayout.closeDrawer(GravityCompat.START);
                         getSupportActionBar().setTitle("Dashboard");
                         //  appTitle.setText("RESUME");
+                        return false;
+
+                    }
+                    case R.id.contactus: {
+                        Intent i=new Intent(Mainscreen.this, ContactUs.class);
+                        startActivity(i);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportActionBar().setTitle("Dashboard");
+                        return false;
+
+                    }
+                    case R.id.aboutus: {
+                        Intent i=new Intent(Mainscreen.this, AboutUs.class);
+                        startActivity(i);
+                        drawerLayout.closeDrawer(GravityCompat.START);
+                        getSupportActionBar().setTitle("Dashboard");
                         return false;
 
                     }

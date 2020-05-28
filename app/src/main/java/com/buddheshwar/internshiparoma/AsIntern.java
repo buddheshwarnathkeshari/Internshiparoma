@@ -4,9 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.InputType;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Toast;
 
 public class AsIntern extends AppCompatActivity {
 AutoCompleteTextView ac;
@@ -20,11 +22,10 @@ AutoCompleteTextView ac;
         ac.setAdapter(adapter);
         ac.setInputType(0);
 
-        ac.setOnFocusChangeListener(new View.OnFocusChangeListener() {
+        ac.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onFocusChange(View v, boolean hasFocus) {
-                if(hasFocus)
-                    ac.showDropDown();
+            public void onClick(View view) {
+                ac.showDropDown();
             }
         });
     }

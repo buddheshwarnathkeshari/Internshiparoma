@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">Internshiparoma</string>
-
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="open_drawer">open drawer</string>
@@ -9,6 +8,18 @@
     <string name="skill">How would you rate your skill in </string>
     <string name="responsibility">Example: Volunteer at Swacch Bharat Abhiyaan in 2019. </string>
     <string name="add_detail_info">Example: Secured first position in Inter Debate Competition organized by City Montessori School,Lucknow.</string>
+    <string name="about_info">We are a well-handled and a purposeful organization that works intending to provide an appropriate platform for the learners to designate themselves with numerous skills and training. And a forum stage for the employers to hire freelancers with devoted skills to work with them in required fields.
+</string>
+
+    <string name="for_students">We provide them with practical exposure with online courses and apprenticeships of their relevance (anytime and anywhere) under the mentorship of experienced and finest professionals. Providing them the arena where they can pursue their passion as their career choice, with proper guidance and online pieces of training with minimal charges.
+    </string>
+    <string name="for_employers">Contributing them with the top-notch freelancers for their formulations having expertise in their respective fields ranging from science and technology, covering the parts of development, management, literature, and ending up to data entry and other services. </string>
+
+    <string name="addresss">XYS,ABC street,\n Noida,India-122018 </string>
+    <string name="working_hours">Monday to Friday, 10:00 AM to 5:00 PM</string>
+    <string name="queries">For internship related queries, visit Students Help Centre</string>
+
+
     <string-array name="nn">
 
         <item>k</item>
@@ -19,5 +30,6 @@
         <item>k</item>
         <item>k</item>
     </string-array>
+
 
 </resources>

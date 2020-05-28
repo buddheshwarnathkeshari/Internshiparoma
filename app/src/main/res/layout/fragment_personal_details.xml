@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".resume.PersonalDetails">
+
+    <!-- TODO: Update blank fragment layout -->
+    <EditText
+        android:id="@+id/college"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"        android:padding="10dp"
+        android:layout_margin="10dp"
+        android:hint="College"
+        android:background="@drawable/grey_button_color_changer"
+        android:textColor="@color/textColor"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="2">
+        <AutoCompleteTextView
+            android:id="@+id/startYr"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"
+            android:padding="10dp"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:layout_margin="10dp"
+            android:hint="Start Year"
+            android:background="@drawable/grey_button_color_changer"
+            android:textColor="@color/textColor"
+            android:drawableRight="@drawable/ic_grey_caret_down"/>
+        <AutoCompleteTextView
+            android:id="@+id/endYr"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:gravity="center_vertical"            android:padding="10dp"
+            android:layout_weight="1"
+            android:layout_margin="10dp"
+            android:maxLines="1"
+            android:hint="Expected End Year"
+            android:background="@drawable/grey_button_color_changer"
+            android:textColor="@color/textColor"
+            android:drawableRight="@drawable/ic_grey_caret_down"/>
+
+    </LinearLayout>
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_back"
+        android:layout_height="wrap_content"
+        android:text="Save"
+        android:layout_margin="10dp"
+        android:paddingLeft="80dp"
+        android:layout_gravity="center_horizontal"
+        android:paddingRight="80dp"
+        android:textAllCaps="false"
+        android:textColor="@color/windowColor"
+        android:textSize="18sp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"/>
+
+</RelativeLayout>
