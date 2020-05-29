@@ -9,17 +9,25 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ContactUs"></activity>
+        <activity android:name=".SelectCity"></activity>
+        <activity android:name=".ContactUs" />
         <activity android:name=".AboutUs" />
         <activity
             android:name=".NotificationActivity"
             android:theme="@style/SecondAppTheme" />
-        <activity android:name=".PostInternshipActivity"></activity>
-
-        <activity android:name=".GettingStartedActivity" android:screenOrientation="portrait"/>
-        <activity android:name=".AsEmployer" android:screenOrientation="portrait"/>
-        <activity android:name=".SelectField" android:screenOrientation="portrait"/>
-        <activity android:name=".AsIntern2" android:screenOrientation="portrait"/>
+        <activity android:name=".PostInternshipActivity" />
+        <activity
+            android:name=".GettingStartedActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AsEmployer"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".SelectField"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".AsIntern2"
+            android:screenOrientation="portrait" />
         <activity
             android:name=".AsIntern"
             android:screenOrientation="portrait" />
@@ -32,6 +40,7 @@
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

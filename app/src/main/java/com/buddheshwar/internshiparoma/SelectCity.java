@@ -9,33 +9,30 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.ListView;
-import android.widget.Toast;
 
-public class SelectField extends AppCompatActivity implements AdapterView.OnItemClickListener {
+public class SelectCity extends AppCompatActivity implements AdapterView.OnItemClickListener {
 
-   // @Override
-            //public void onBackPressed
+
     AutoCompleteTextView ac;
     ListView lv;
-    String[] list;
+
     String[] dataStringArray;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_select_field);
+        setContentView(R.layout.activity_select_city);
         ac=findViewById(R.id.actv);
         lv=findViewById(R.id.list);
-        list=new String[]{"Architecture","Interior Design","Accounts","Chartered Accountancy(CA)","Animation","Fashion Design","Graphic Design","Merchandise Design","Aerospace Engineering","Android App Development","Biotechnology Engineering", "Chemical Engineering","Civil Engineering","Computer Vision","Electrical Engineering","Electronics Engineering","Energy Science & Engineering","Engineering Physics","Game Development"};
+        final String[] list=new String[]{"Agra","Ahmedabad","Allahabad","Amritsar","Aurangabad","Bangalore","Bhopal","Bhubaneswar","Chandigarh","Chennai","Coimbatore","Delhi","Dhanbad","Faridabad","Ghaziabad","Gurgaon","Guwahati","Gwalior","Howrah","Hyderabad"};
         ArrayAdapter adapter=new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,list);
         lv.setAdapter(adapter);
-     //   ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>()
+        //   ArrayAdapter<String> arrayAdapter= new ArrayAdapter<String>()
         ac.setAdapter(adapter);
         ac.setThreshold(1);
 
 
 
-
-       final Bundle extras=getIntent().getExtras();
+        final Bundle extras=getIntent().getExtras();
         dataStringArray=extras.getStringArray("DataStringArray");
 
         lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
@@ -43,21 +40,21 @@ public class SelectField extends AppCompatActivity implements AdapterView.OnItem
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //Toast.makeText(getApplicationContext(),list[position].toString(),Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(SelectField.this,EditPreferencesActivity.class);
-              //  ListView lv=findViewById(view.getId());
+                Intent i=new Intent(SelectCity.this,EditPreferencesActivity.class);
+                //  ListView lv=findViewById(view.getId());
                 int preference=extras.getInt("PreferenceNumber");
                 String[] newData;
                 switch (preference){
                     case 1:
-                        newData=new String[]{parent.getItemAtPosition(position).toString(),dataStringArray[1],dataStringArray[2],dataStringArray[3],dataStringArray[4],dataStringArray[5]};
+                        newData=new String[]{dataStringArray[0],dataStringArray[1],dataStringArray[2],parent.getItemAtPosition(position).toString(),dataStringArray[4],dataStringArray[5]};
                         break;
 
                     case 2:
-                        newData=new String[]{dataStringArray[0],parent.getItemAtPosition(position).toString(),dataStringArray[2],dataStringArray[3],dataStringArray[4],dataStringArray[5]};
+                        newData=new String[]{dataStringArray[0],dataStringArray[1],dataStringArray[2],dataStringArray[3],parent.getItemAtPosition(position).toString(),dataStringArray[5]};
                         break;
 
                     case 3:
-                        newData=new String[]{dataStringArray[0],dataStringArray[1],parent.getItemAtPosition(position).toString(),dataStringArray[3],dataStringArray[4],dataStringArray[5]};
+                        newData=new String[]{dataStringArray[0],dataStringArray[1],dataStringArray[2],dataStringArray[3],dataStringArray[4],parent.getItemAtPosition(position).toString()};
                         break;
                     default:
                         newData =dataStringArray;
@@ -71,7 +68,6 @@ public class SelectField extends AppCompatActivity implements AdapterView.OnItem
 
             }
         });
-
     }
 
     @Override
@@ -83,14 +79,15 @@ public class SelectField extends AppCompatActivity implements AdapterView.OnItem
     public void onPointerCaptureChanged(boolean hasCapture) {
 
     }
+
+
     @Override
     public void onBackPressed(){
-        Intent i=new Intent(SelectField.this,EditPreferencesActivity.class);
+        Intent i=new Intent(SelectCity.this,EditPreferencesActivity.class);
         i.putExtra("DataStringArray",dataStringArray);
         i.putExtra("IsChecked",getIntent().getExtras().getBoolean("IsChecked"));
         startActivity(i);
         finish();
+
     }
-
-
 }

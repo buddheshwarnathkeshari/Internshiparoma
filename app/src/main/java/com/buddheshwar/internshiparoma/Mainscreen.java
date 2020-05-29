@@ -94,7 +94,11 @@ public class Mainscreen extends AppCompatActivity {
 
                     }
                     case R.id.editpreferences:{
-                        startActivity(new Intent(Mainscreen.this, EditPreferencesActivity.class));
+
+                        Intent i=new Intent(Mainscreen.this, EditPreferencesActivity.class);
+                        i.putExtra("DataStringArray",new String[]{"Content Writing","","","","",""});
+                        i.putExtra("IsChecked",false);
+                        startActivity(i);
                         drawerLayout.closeDrawer(GravityCompat.START);
                         getSupportActionBar().setTitle("Edit Preference");
                         return false;
