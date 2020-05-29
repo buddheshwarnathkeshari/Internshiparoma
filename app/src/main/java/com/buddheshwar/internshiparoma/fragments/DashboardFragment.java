@@ -44,7 +44,7 @@ public class DashboardFragment extends Fragment {
         citiesrecyclerview=view.findViewById(R.id.citiesrecyclerview);
 
 
-        Button post=view.findViewById(R.id.postinternship);
+        Button post=view.findViewById(R.id.postortraining);
 
         post.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -52,7 +52,6 @@ public class DashboardFragment extends Fragment {
                 startActivity(new Intent(getContext(), PostInternshipActivity.class));
             }
         });
-
         LinearLayoutManager layoutManager=new LinearLayoutManager(getActivity());
         modelArrayList=new ArrayList<CitiesModel>();
         modelArrayList.add(new CitiesModel(R.drawable.banglore,"Banglore"));

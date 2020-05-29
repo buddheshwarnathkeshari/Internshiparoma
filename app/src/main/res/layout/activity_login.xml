@@ -5,9 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".LoginActivity"
-    android:background="#DA4B2B">
-
-
+    android:background="@color/colorPrimary">
     <TextView
         android:id="@+id/tv_welcome"
         android:layout_width="wrap_content"
@@ -96,13 +94,14 @@
 
 
     </androidx.cardview.widget.CardView>
-    <TextView
+    <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="SKIP FOR NOW"
         android:layout_above="@id/ll_dont"
         android:layout_below="@id/cardview"
         android:gravity="center"
+        android:theme="@style/borderless"
         android:layout_centerHorizontal="true"
         android:textColor="@color/white"
         android:onClick="goToMain"
