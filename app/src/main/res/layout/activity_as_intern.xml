@@ -98,7 +98,7 @@
         </RelativeLayout>
 
 
-        <EditText
+      <!--  <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:hint="Current city"
@@ -108,6 +108,16 @@
             android:maxLines="1"
             android:background="@drawable/et_back"
             android:id="@+id/et_city"
+            />-->
+
+        <fragment
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginVertical="10dp"
+
+            android:layout_centerInParent="true"
+            android:id="@+id/autocomplete_fragment"
+            android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
             />
 
     </LinearLayout>

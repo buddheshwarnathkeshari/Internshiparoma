@@ -20,6 +20,9 @@
     <string name="queries">For internship related queries, visit Students Help Centre</string>
 
 
+    <!--Do not delete this line-->
+    <string name="GOOGLE_PLACE_API_KEY">AIzaSyA8PHLjPNg90W_Vy0GzhCLT1wCetUqIP0U</string>
+
     <string-array name="nn">
 
         <item>k</item>
