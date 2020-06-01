@@ -96,6 +96,18 @@
                 android:textColor="@color/dark"
                 android:layout_height="match_parent"/>
         </RelativeLayout>
+        <AutoCompleteTextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:hint="Current City"
+            android:textColorHint="@color/light"
+            android:padding="10dp"
+            android:layout_below="@id/tv"
+            android:layout_marginVertical="10dp"
+            android:maxLines="1"
+            android:inputType="text"
+            android:background="@drawable/et_back"
+            android:id="@+id/ac_city"/>
 
 
       <!--  <EditText
@@ -110,7 +122,7 @@
             android:id="@+id/et_city"
             />-->
 
-        <fragment
+       <!-- <fragment
             android:layout_width="match_parent"
             android:layout_height="40dp"
             android:layout_marginVertical="10dp"
@@ -118,7 +130,7 @@
             android:layout_centerInParent="true"
             android:id="@+id/autocomplete_fragment"
             android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
-            />
+            />-->
 
     </LinearLayout>
 
