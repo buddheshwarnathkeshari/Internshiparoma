@@ -1,20 +1,28 @@
 package com.buddheshwar.internshiparoma;
 
+import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.annotation.SuppressLint;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
+import android.view.animation.ScaleAnimation;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
+import android.widget.Button;
 import android.widget.Toast;
 
+import com.android.volley.NoConnectionError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
+import com.android.volley.TimeoutError;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.Volley;
@@ -93,8 +101,35 @@ public class AsIntern extends AppCompatActivity {
 
                                 }
                             }, new Response.ErrorListener() {
+                        @SuppressLint("ResourceAsColor")
                         @Override
                         public void onErrorResponse(VolleyError error) {
+
+
+                            if(error instanceof TimeoutError||error instanceof NoConnectionError){
+                                Toast.makeText(getApplicationContext(),""+error.toString(),Toast.LENGTH_SHORT).show();
+
+                                AlertDialog.Builder builder=new AlertDialog.Builder(AsIntern.this);
+                                builder.setMessage("You are currenly offline, please connect to internet.")
+                                        .setCancelable(false)
+                                        .setIcon(R.drawable.ic_info_outline_black_24dp)
+                                        .setPositiveButton("Ok", new DialogInterface.OnClickListener() {
+                                            @Override
+                                            public void onClick(DialogInterface dialog, int which) {
+
+
+                                            }
+                                        });
+                                AlertDialog alertDialog=builder.create();
+                                alertDialog.setTitle("No Connection");
+                                alertDialog.show();
+
+                                Button btnDialogOk=alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
+                                btnDialogOk.setTextColor(getResources().getColor(R.color.dark));
+
+
+
+                            }
                         }
                     });
                     requestQueue.add(jsonObjectRequest);
