@@ -45,7 +45,9 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".LoginActivity" />
         <activity android:name=".EditPreferencesActivity" />
-        <activity android:name=".VerifyEmailActivity" />
+        <activity android:name=".VerifyEmailActivity"
+
+            android:screenOrientation="portrait" />
         <activity android:name=".SplashScreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

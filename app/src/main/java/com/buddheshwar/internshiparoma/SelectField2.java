@@ -43,7 +43,7 @@ public class SelectField2 extends AppCompatActivity implements AdapterView.OnIte
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
                 //Toast.makeText(getApplicationContext(),list[position].toString(),Toast.LENGTH_SHORT).show();
-                Intent i=new Intent(SelectField2.this,AsIntern.class);
+                Intent i=new Intent(SelectField2.this,AsIntern2.class);
                 //  ListView lv=findViewById(view.getId());
                 int preference=extras.getInt("PreferenceNumber");
                 String[] newData;
@@ -84,7 +84,7 @@ public class SelectField2 extends AppCompatActivity implements AdapterView.OnIte
     }
     @Override
     public void onBackPressed(){
-        Intent i=new Intent(SelectField2.this,AsIntern.class);
+        Intent i=new Intent(SelectField2.this,AsIntern2.class);
         i.putExtra("DataStringArray",dataStringArray);
         startActivity(i);
         finish();

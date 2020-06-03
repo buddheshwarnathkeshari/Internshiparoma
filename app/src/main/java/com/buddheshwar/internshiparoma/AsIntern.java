@@ -179,8 +179,9 @@ public class AsIntern extends AppCompatActivity {
     }
 
     public void goToAsIntern2(View view) {
-
-        startActivity(new Intent(AsIntern.this,AsIntern2.class));
+        Intent i=new Intent(AsIntern.this,AsIntern2.class);
+        i.putExtra("DataStringArray",new String[]{"","",""});
+        startActivity(i);
 
     }
 }

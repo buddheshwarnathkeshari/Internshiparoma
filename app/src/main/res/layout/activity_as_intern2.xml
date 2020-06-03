@@ -16,6 +16,8 @@
         android:textSize="25dp"
         android:paddingVertical="20dp"/>
 
+
+
     <TextView
         android:id="@+id/tv"
         android:layout_below="@id/tv_name"
@@ -26,12 +28,13 @@
         android:text="Choose your preferences"
         />
 
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@id/tv"
         android:id="@+id/ll_details"
-        android:layout_marginHorizontal="30dp"
+        android:layout_marginHorizontal="20dp"
         android:orientation="vertical">
 
 
@@ -43,15 +46,18 @@
             android:layout_marginVertical="10dp"
             android:textColorHint="@color/light"
             android:padding="10dp"
+            android:drawableRight="@drawable/ic_clear"
             android:maxLines="1"
             android:background="@drawable/et_back"
-            android:id="@+id/et_preference_one"
+            android:id="@+id/et_skill_preference_one"
+            android:onClick="goToSelectField2"
             android:focusable="false"
             android:inputType="none"
             />
         <EditText
             android:layout_width="match_parent"
             android:layout_height="40dp"
+            android:drawableRight="@drawable/ic_clear"
             android:hint="2. Choose your 2nd preference"
             android:layout_marginVertical="10dp"
             android:textColorHint="@color/light"
@@ -59,48 +65,29 @@
             android:focusable="false"
             android:maxLines="1"
             android:background="@drawable/et_back"
-            android:id="@+id/et_preference_two"
+            android:onClick="goToSelectField2"
+            android:id="@+id/et_skill_preference_two"
             android:inputType="none"
             />
 
         <EditText
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
-            android:focusable="false"
-        android:hint="3. Choose your 3rd preference"
-        android:layout_marginVertical="10dp"
-        android:textColorHint="@color/light"
-        android:padding="10dp"
-        android:maxLines="1"
-        android:background="@drawable/et_back"
-        android:id="@+id/et_preference_three"
-        android:inputType="none"
-        />
-
-
-
-        <RadioGroup
             android:layout_width="match_parent"
             android:layout_height="40dp"
-            android:orientation="horizontal"
-            android:outlineAmbientShadowColor="@color/dark">
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/dark"
-                android:text="Full time"
-                android:buttonTint="@color/dark"
-                android:id="@+id/pursuing"
-                android:layout_marginLeft="12dp"/>
-            <RadioButton
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:textColor="@color/dark"
-                android:buttonTint="@color/dark"
-                android:text="Part time/Work from Home"
-                android:id="@+id/completed"
-                android:layout_marginLeft="20dp"/>
-        </RadioGroup>
+            android:drawableRight="@drawable/ic_clear"
+            android:onClick="goToSelectField2"
+            android:focusable="false"
+            android:hint="3. Choose your 3rd preference"
+            android:layout_marginVertical="10dp"
+            android:textColorHint="@color/light"
+            android:padding="10dp"
+            android:maxLines="1"
+            android:background="@drawable/et_back"
+            android:id="@+id/et_skill_reference_three"
+            android:inputType="none"
+            />
+
+
+
 
 
     </LinearLayout>

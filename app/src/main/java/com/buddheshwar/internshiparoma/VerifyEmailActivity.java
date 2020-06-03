@@ -5,11 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.net.nsd.NsdManager;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.KeyEvent;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 
 public class VerifyEmailActivity extends AppCompatActivity {
 
@@ -27,6 +29,22 @@ public class VerifyEmailActivity extends AppCompatActivity {
         otpET2 = findViewById(R.id.et_otp2);
         otpET3 = findViewById(R.id.et_otp3);
         otpET4 = findViewById(R.id.et_otp4);
+
+        final TextView tvCountDown=findViewById(R.id.counter);
+
+        new CountDownTimer(60000,1000){
+
+            @Override
+            public void onTick(long millisUntilFinished) {
+                tvCountDown.setText(""+millisUntilFinished/1000+":"+"00");
+
+            }
+
+            @Override
+            public void onFinish() {
+
+            }
+        }.start();
 
         otpET1.setOnKeyListener(new View.OnKeyListener() {
             @Override
@@ -145,6 +163,9 @@ public class VerifyEmailActivity extends AppCompatActivity {
             @Override
             public void afterTextChanged(Editable s) { }
         });
+
+
+
 
     }
 
