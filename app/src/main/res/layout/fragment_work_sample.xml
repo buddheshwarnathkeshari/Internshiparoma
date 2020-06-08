@@ -71,7 +71,7 @@
         android:paddingRight="80dp"
         android:textAllCaps="false"
         android:textColor="@color/windowColor"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"/>
 

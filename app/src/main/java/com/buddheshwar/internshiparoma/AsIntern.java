@@ -85,7 +85,6 @@ public class AsIntern extends AppCompatActivity {
                                             for(int i=0;i<prediction.length();i++){
                                                 JSONObject jsonObject= prediction.getJSONObject(i);
                                                 String description=jsonObject.getString("description");
-
                                                 list2[i]=description;
                                             }
                                             ArrayAdapter adapter=new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,list2);
@@ -107,8 +106,6 @@ public class AsIntern extends AppCompatActivity {
 
 
                             if(error instanceof TimeoutError||error instanceof NoConnectionError){
-                                Toast.makeText(getApplicationContext(),""+error.toString(),Toast.LENGTH_SHORT).show();
-
                                 AlertDialog.Builder builder=new AlertDialog.Builder(AsIntern.this);
                                 builder.setMessage("You are currenly offline, please connect to internet.")
                                         .setCancelable(false)
@@ -126,8 +123,6 @@ public class AsIntern extends AppCompatActivity {
 
                                 Button btnDialogOk=alertDialog.getButton(AlertDialog.BUTTON_POSITIVE);
                                 btnDialogOk.setTextColor(getResources().getColor(R.color.dark));
-
-
 
                             }
                         }

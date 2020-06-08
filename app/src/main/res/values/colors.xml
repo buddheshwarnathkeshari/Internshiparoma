@@ -16,4 +16,6 @@
     <color name="dark">#EDE15637</color>
     <color name="light">#F0B6AA</color>
     <color name="mid">#EDD8664D</color>
+    <color name="ic_launcher_background">#ffffff</color>
+
 </resources>

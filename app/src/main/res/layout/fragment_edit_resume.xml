@@ -71,8 +71,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PERSONAL DETAILS"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="15dp"/>
+                    android:textSize="13dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/educationListColor"/>
                <RelativeLayout
                    android:layout_width="match_parent"
                    android:layout_height="wrap_content"
@@ -81,7 +82,7 @@
                        android:layout_width="wrap_content"
                        android:layout_height="wrap_content"
                        android:textColor="@color/textColor"
-                       android:textSize="22sp"
+                       android:textSize="22dp"
                        android:text="Munazza Fatma"
                        android:textStyle="bold"
                        android:layout_alignParentLeft="true"/>
@@ -97,18 +98,18 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="fatmamunazza@gmail.com"
-                    android:textSize="15sp"/>
+                    android:textSize="15dp"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+91-7255093044"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textColor="@color/educationListColor"/>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Patna"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textColor="@color/educationListColor"/>
             </LinearLayout>
             <View
@@ -126,20 +127,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="EDUCATION"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="15dp"/>
+                    android:textSize="13dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/educationListColor"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewEducation">
+                    android:id="@+id/recyclerViewEducation"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Education"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:id="@+id/education"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>
@@ -159,20 +161,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="JOBS"
-                    android:textSize="15sp"
-                    android:layout_marginBottom="15dp"/>
+                    android:textSize="13dp"
+                    android:layout_marginBottom="15dp"
+                    android:textColor="@color/educationListColor"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewJob">
+                    android:id="@+id/recyclerViewJob"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Job"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:id="@+id/job"
                     android:textColor="@color/colorPrimary"/>
@@ -192,12 +195,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="INTERNSHIPS"
-                    android:textSize="15sp"
+                    android:textColor="@color/educationListColor"
+                    android:textSize="13dp"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
                     android:id="@+id/recyclerViewInternship">
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -205,7 +209,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Internship"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:id="@+id/internship"
                     android:textColor="@color/colorPrimary"/>
@@ -225,12 +229,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="POSITIONS OF RESPONSIBILITY"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
                     android:id="@+id/recyclerViewResponsibility">
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -238,7 +243,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Position of Responsibility"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:id="@+id/responsibility"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>
@@ -258,20 +263,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="TRAININGS"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewTraining">
+                    android:id="@+id/recyclerViewTraining"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Training"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:id="@+id/training"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>
@@ -291,12 +297,13 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="PROJECTS"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
+                    android:nestedScrollingEnabled="false"
                     android:id="@+id/recyclerViewProject">
 
                 </androidx.recyclerview.widget.RecyclerView>
@@ -304,7 +311,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Project"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:id="@+id/project"
                     android:textColor="@color/colorPrimary"/>
@@ -324,20 +331,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="SKILLS"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewSkill">
+                    android:id="@+id/recyclerViewSkill"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Skill"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:textStyle="bold"
                     android:id="@+id/skill"
                     android:textColor="@color/colorPrimary"/>
@@ -357,20 +365,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="WORK SAMPLES"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewWork">
+                    android:id="@+id/recyclerViewWork"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Work Sample"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:id="@+id/work"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>
@@ -390,20 +399,21 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="ADDITIONAL DETAILS"
-                    android:textSize="15sp"
+                    android:textSize="13dp"
+                    android:textColor="@color/educationListColor"
                     android:layout_marginBottom="15dp"/>
                 <androidx.recyclerview.widget.RecyclerView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginBottom="10dp"
-                    android:id="@+id/recyclerViewDetail">
+                    android:id="@+id/recyclerViewDetail"
+                    android:nestedScrollingEnabled="false">
 
                 </androidx.recyclerview.widget.RecyclerView>
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="+ Add Additional Detail"
-                    android:textSize="15sp"
+                    android:textSize="15dp"
                     android:id="@+id/details"
                     android:textStyle="bold"
                     android:textColor="@color/colorPrimary"/>

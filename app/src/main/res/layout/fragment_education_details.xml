@@ -15,7 +15,7 @@
         android:layout_height="wrap_content"
         android:text="Graduation status"
         android:paddingLeft="10dp"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:id="@+id/status"
         android:textColor="@color/educationListColor"/>
     <RadioGroup
@@ -38,8 +38,9 @@
     <EditText
         android:id="@+id/college"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:gravity="center_vertical"        android:padding="10dp"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="10dp"
         android:layout_margin="10dp"
         android:hint="College"
         android:background="@drawable/grey_button_color_changer"
@@ -52,7 +53,7 @@
         <AutoCompleteTextView
             android:id="@+id/startYr"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:gravity="center_vertical"
             android:padding="10dp"
             android:layout_weight="1"
@@ -65,12 +66,13 @@
         <AutoCompleteTextView
             android:id="@+id/endYr"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:maxLines="1"
-            android:hint="Expected End Year"
+            android:hint="End Year"
             android:background="@drawable/grey_button_color_changer"
             android:textColor="@color/textColor"
             android:drawableRight="@drawable/ic_grey_caret_down"/>
@@ -79,7 +81,7 @@
     <EditText
         android:id="@+id/degreeBoard"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"        android:padding="10dp"
         android:layout_margin="10dp"
         android:hint="Degree"
@@ -100,7 +102,7 @@
     <AutoCompleteTextView
         android:id="@+id/intermediateStream"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:padding="10dp"
         android:layout_margin="10dp"
@@ -113,7 +115,7 @@
     <EditText
         android:id="@+id/streamSchool"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:gravity="center_vertical"        android:padding="10dp"
         android:layout_margin="10dp"
         android:hint="Stream"
@@ -127,19 +129,20 @@
         <AutoCompleteTextView
             android:id="@+id/scale"
             android:layout_width="0dp"
-            android:layout_height="50dp"
-            android:gravity="center_vertical"            android:padding="10dp"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="10dp"
             android:layout_weight="1"
             android:layout_margin="10dp"
             android:maxLines="1"
-            android:hint="Performance Scale"
+            android:hint="Performance Sc..."
             android:background="@drawable/grey_button_color_changer"
             android:textColor="@color/textColor"
             android:drawableRight="@drawable/ic_grey_caret_down" />
         <EditText
             android:id="@+id/performance"
             android:layout_width="0dp"
-            android:layout_height="50dp"
+            android:layout_height="wrap_content"
             android:maxLines="1"
             android:gravity="center_vertical"            android:padding="10dp"
             android:layout_weight="1"
@@ -162,7 +165,7 @@
         android:paddingRight="80dp"
         android:textAllCaps="false"
         android:textColor="@color/windowColor"
-        android:textSize="18sp"
+        android:textSize="18dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"/>
 

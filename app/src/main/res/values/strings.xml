@@ -19,9 +19,16 @@
     <string name="working_hours">Monday to Friday, 10:00 AM to 5:00 PM</string>
     <string name="queries">For internship related queries, visit Students Help Centre</string>
 
+    <string name="questions">Do you have any question(s) that you want the intern to answer in the application</string>
+    <string name="question1">Why should you be hired for this internship?\n(maximum 2048 characters)</string>
+    <string name="question2">Are you available for 1 month, starting immediately,for a work from home internship?If not, what is the time period you are available for and the earliest date you can start this internship on?</string>
+
 
     <!--Do not delete this line-->
+    <!--
     <string name="GOOGLE_PLACE_API_KEY">AIzaSyA8PHLjPNg90W_Vy0GzhCLT1wCetUqIP0U</string>
+-->
+    <string name="GOOGLE_PLACE_API_KEY">AIzaSyDwUZjeaF1Ez2ocpxYZ0xqcrbRtghQ_6gw</string>
 
     <string-array name="nn">
 

@@ -33,8 +33,8 @@ public class Resume extends AppCompatActivity {
 
         resumeTitle.setText("Resume");
 
-       // Fragment fr=new EditResume();
-        //getSupportFragmentManager().beginTransaction().replace(R.id.container_resume,fr).commit();
+        Fragment fr=new EditResume();
+        getSupportFragmentManager().beginTransaction().replace(R.id.container_resume,fr).commit();
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -149,7 +149,6 @@ public class EducationDetails extends Fragment {
                         startYr.setCompoundDrawablesWithIntrinsicBounds(null, null, getActivity().getDrawable(R.drawable.ic_caret_down), null);
                     }
                     startYr.showDropDown();
-                    Toast.makeText(getContext(), "munazza", Toast.LENGTH_SHORT).show();
                 }
                 else{
                     if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
