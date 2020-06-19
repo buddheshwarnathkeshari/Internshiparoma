@@ -29,6 +29,7 @@
     <string name="GOOGLE_PLACE_API_KEY">AIzaSyA8PHLjPNg90W_Vy0GzhCLT1wCetUqIP0U</string>
 -->
     <string name="GOOGLE_PLACE_API_KEY">AIzaSyDwUZjeaF1Ez2ocpxYZ0xqcrbRtghQ_6gw</string>
+    <string name="type_something">Type Something...</string>
 
     <string-array name="nn">
 

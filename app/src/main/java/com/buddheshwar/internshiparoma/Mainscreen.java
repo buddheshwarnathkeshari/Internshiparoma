@@ -140,6 +140,9 @@ public class Mainscreen extends AppCompatActivity {
 
                     }
                     case R.id.chat_bottom_nav:{
+                        item.setCheckable(true);
+                        item.setChecked(true);
+                        getSupportActionBar().setTitle("Chats");
                         return false;
                     }
                     default:{
